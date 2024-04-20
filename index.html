@@ -1,0 +1,75 @@
+---
+title: Apoxicam
+description: I am not a photographer, but i took these photos
+keyword: mobile photography, team pixel
+author: Aris Pratama
+cover: /asset/cover.jpg
+profile: /asset/profile.jpg
+layout: layout.html
+---
+<div class="container is-max-desktop">
+    <section class="hero">
+        <div class="hero-body no-padding-mobile">
+            <!-- here we go, card. you know my style -->
+            <div class="card no-border-radius-mobile">
+                <!-- cover page -->
+                <div class="card-image">
+                    <figure class="image">
+                        <img class="card-no-border-radius-mobile" src={{ cover }} alt="cover">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-left">
+                            <figure class="image is-48x48">
+                                <img class="has-radius-normal" src={{ profile }} alt="profile pic">
+                            </figure>
+                        </div>
+                        <div class="media-content">
+                            <p class="title is-4">{{ author }}</p>
+                            <p class="subtitle is-6">@{{ title }}</p>
+                        </div>
+                    </div>
+                    <!-- here's nav bar -->
+                    <div class="content">
+                        <a class="has-bg-transparent is-size-6 has-text-weight-semibold" href="/photos">Photos</a>
+                        <a class="has-bg-transparent is-size-6 has-text-weight-semibold" href="/blog">Random Blog</a>
+                    </div>
+                    <div class="content">
+                        <!-- describe yourself here -->
+                        <div class="content">
+                            <h4>Halo dan selamat datang di situs pribadi saya</h4>
+                            <p>
+                                Perkenalkan, saya Aris. Saya cuman Warga Negara Indonesia biasa yang suka jepret-jepret khususnya mobile photography.
+                                Device yang saya pakai adalah Google Pixel 6a.
+                                Sehari-hari saya bekerja menjadi admin di sebuah kantor yang sepertinya tidak perlu saya sebutkan.
+                            </p>
+                            <h4 class="no-margin-top">Apoxicam</h4>
+                            <p>
+                                Saya menggunakan kata <code>Apoxicam</code> untuk situs ini dan semua sosmed yang saya pakai.
+                                Arti sebenarnya adalah akronim dari <i>"Aris photography pixel camera"</i>.
+                                Gimana ya? butuh waktu mingguan lho untuk mencari nama yang benar-benar unik dan dapat idenya juga tiba-tiba. Hehe...<br>
+                                Oh iya, situs ini saya buat dibantu <a href="https://mustofa.id">teman saya</a> menggunakan <a href="https://www.11ty.dev/">eleventy</a> dan <a href="https://bulma.io/">Bulma</a>.
+                                Mungkin akan saya buatkan dokumentasi lain waktu (bila sempat).<br>
+                                Terima kasih sudah berkenan mampir...
+                                <blockquote>
+                                    A photograph keeps a moment from running away
+                                </blockquote>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- here is footer -->
+                <footer class="card-footer">
+                    <div class="card-footer-item has-text-centered">
+                        <p class="is-size-7">
+                            © 2024 <a href="https://instagram.com/apoxicam">Apoxicam</a><br>
+                            Powered by <a href="https://www.11ty.dev/">Eleventy</a> and <a href="https://bulma.io/">Bulma</a><br>
+                            Sauce is available on <a href="/">Github</a>
+                        </p>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="{{ desc }}">
+		<meta name="keyword" content="{{ keyword }}">
+		<meta name="author" content="{{ author }}">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/x-icon" href="/asset/favicon.ico">
+		<title>{{ title }}</title>
+		<link rel="stylesheet" href="/style.css">
+		<link href="https://css.gg/css" rel="stylesheet">
+	<body class="has-bg-little-dark">
+		<div class="container is-max-desktop">
+			<section class="hero">
+				<div class="hero-body no-padding-mobile">
+					<!-- card and card again -->
+					<div class="card no-border-radius-mobile">
+						<!-- navbar -->
+						<div class="card-content has-no-padding-top-bottom">
+							<div class="navbar-brand">
+								<a class="navbar-item hoverable" href="/blog"><i class="gg-arrow-left"></i></a>
+								<div class="item-nav-end">
+									<a class="navbar-item hoverable fix-width" href="#share"><i class="gg-share"></i></a>
+								</div>
+							</div>
+						</div>
+						<hr class="no-margin">
+						<div class="card-content">
+							<div class="content">
+								<p class="title is-4">{{ title | default: "My Blog" }}</p>
+								<!-- help puh, need date post here -->
+								<p>
+									{{ content }}
+								</p>
+							</div>
+						</div>
+						<!-- here is footer -->
+						<footer class="card-footer">
+							<div class="card-footer-item has-text-centered">
+								<p class="is-size-7">
+									© 2024 <a href="https://instagram.com/apoxicam">Apoxicam</a><br>
+									Powered by <a href="https://www.11ty.dev/">Eleventy</a> and <a href="https://bulma.io/">Bulma</a><br>
+									Sauce is available on <a href="/">Github</a>
+								</p>
+							</div>
+						</footer>
+					</div>
+				</div>
+			</section>
+		</div>
+	</body>
+</html>
