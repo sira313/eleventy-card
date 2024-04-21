@@ -11,11 +11,11 @@ Powered by
 
 ### Basic Info
 #### Menu
-There is 2 menu we created by default:
+There are 2 menus (for indexing post, not a single page) we created by default:
 - Photos
 - Blog
 
-So if you wanted to create another menu, maybe [this tutorial](https://www.youtube.com/watch?v=kzf9A9tkkl4) will help.
+So if you wanted to create another one, maybe [this tutorial](https://www.youtube.com/watch?v=kzf9A9tkkl4) will help.
 #### Layout
 There is 3 layouts in [/_includes](/_includes/):
 - [/_includes/layout.html](/_includes/layout.html) is the main layout called in other layout frontmatter.
