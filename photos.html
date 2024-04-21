@@ -38,7 +38,7 @@ layout: layout.html
                             {% for photos in collections.photos %}
                             <a class="has-radius-normal" href={{ photos.url }}>
                                 <div class="masonry-item">
-                                    <img class="has-radius-normal" src={{ photos.data.thumbnail }} alt="thumbnail">
+                                    <img class="has-radius-normal must-responsive" src={{ photos.data.thumbnail }} alt="thumbnail">
                                 </div>
                             </a>
                             {% endfor %}
