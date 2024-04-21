@@ -10,6 +10,12 @@ Powered by
 [![Netlify Status](https://api.netlify.com/api/v1/badges/d32e682c-0084-4b0e-96e3-286b816a5033/deploy-status)](https://app.netlify.com/sites/eleventy-card/deploys)
 
 ### Basic Info
+```
+git clone https://github.com/sira313/eleventy-card-bulma/
+npm install
+npm run
+```
+
 #### Menu
 There are 2 menus (for indexing post, not a single page) we created by default:
 - Photos
