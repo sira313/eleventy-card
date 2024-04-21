@@ -36,7 +36,7 @@ There is 3 layouts in [/_includes](/_includes/):
 - [/_includes/photos.html](/_includes/photos.html) is for [photos post layout](/photos/). It's called in [photos.json](/photos/photos.json).
 #### Index
 There is 3 indexs in this project
-- [/index.html](/index.html) where you describe your own business.
+- [/index.html](/index.html) where you describe your own business. Basic knowledge of HTML and CSS needed here.
 - [/photos.html](/photos.html) where you store all your photos.
 - [/blog.html](/blog.html) where you write anything.
 #### Post
