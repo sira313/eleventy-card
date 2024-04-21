@@ -46,4 +46,4 @@ Post a work using markdown in [/photos/post](/photos/post/) directory.
 ##### Blog
 Write your blog using markdown in [/blog/post](/blog/posts/) directory.
 #### Asset
-All asset are in [/asset](/asset/) directory and called in the frontmatter.
+All assets are in [/asset](/asset/) directory and called in the frontmatter.
