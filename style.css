@@ -1,6 +1,10 @@
 /* custom */
 
 /* masonry */
+.must-responsive {
+  width: 100%;
+  height: auto;
+}
 .masonry {
   --masonry-gap: 0.5rem;
   --masonry-brick-width: 180px;
