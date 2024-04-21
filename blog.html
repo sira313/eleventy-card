@@ -41,6 +41,7 @@ layout: layout.html
                                 <!-- help me to replace this below with limit 20 words of content preview -->
                                 <p>{{ post.data.desc }}</p>
                                 <!-- help mastah, need date here -->
+                                <p class="is-size-7">{{ post.data.date | date: "%a, %d %b %Y" }}</p>
                             </li>
                             {% endfor %}
                         </ul>    
