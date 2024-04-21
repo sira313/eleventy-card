@@ -20,7 +20,7 @@ npm install
 ```
 Run to your localhost 
 ```
-npm run
+npm start
 ```
 
 #### Menu
