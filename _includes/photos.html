@@ -33,11 +33,11 @@
 						</div>
 						<div class="card-content">
 							<div class="content">
-								<p class="title is-4">{{ title | default: "My Blog" }}</p>
-								<!-- help puh, need date post here -->
+								<p class="title is-4 margin-bottom-1">{{ title | default: "My Blog" }}</p>
 								<p>
 									{{ content }}
 								</p>
+								<p class="has-text-right">{{ date | date: "%a, %d %b %Y" }}</p>
 							</div>
 						</div>
 						<!-- here is footer -->

@@ -28,8 +28,8 @@
 						<hr class="no-margin">
 						<div class="card-content">
 							<div class="content">
-								<p class="title is-4">{{ title | default: "My Blog" }}</p>
-								<!-- help puh, need date post here -->
+								<p class="title is-4 margin-bottom-1">{{ title | default: "My Blog" }}</p>
+								<p class="is-size-7">{{ date | date: "%a, %d %b %Y" }}</p>
 								<p>
 									{{ content }}
 								</p>

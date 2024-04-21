@@ -65,6 +65,9 @@
 .no-margin-bottom {
   margin-bottom: 0 !important;
 }
+.margin-bottom-1 {
+  margin-bottom: 1rem !important;
+}
 .max-width-40 {
     max-width: 45em;
 }
