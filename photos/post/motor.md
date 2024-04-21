@@ -2,7 +2,7 @@
 title: Photo In hac habitasse platea dictumst
 desc: In hac habitasse platea dictumst. Nunc hendrerit ultrices lectus, sed facilisis nisi lacinia quis. Nunc nulla libero, consequat at arcu sit amet, sollicitudin placerat nisl. Praesent mollis nulla maximus nisl tristique, ac tempor enim cursus
 cover: /asset/photos/motor.jpg
-thumbnail: /asset/photos/motor.jpg
+thumbnail: /asset/photos/thumbnail/motor.jpg
 ---
 Pellentesque eget est consequat orci lacinia posuere. Sed risus est, consequat at pretium vel, placerat ac neque. Fusce vitae consectetur lorem, sed fermentum tellus. Aenean tristique arcu ullamcorper, feugiat orci sit amet, viverra dui. Proin ipsum enim, cursus ac augue vitae, semper blandit sapien. Sed finibus cursus nisi ac pharetra. Vivamus quis ipsum at sapien vestibulum tincidunt. Maecenas quis libero et neque elementum scelerisque. Aenean dapibus dui ut fermentum rhoncus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla lacinia gravida nulla id iaculis.
 
