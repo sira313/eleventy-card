@@ -10,7 +10,7 @@ layout: layout.html
 <div class="container is-max-desktop">
     <section class="hero">
         <div class="hero-body no-padding-mobile">
-            <!-- card again -->
+            <!-- card again for cover -->
             <div class="card no-border-radius-mobile">
                 <div class="card-image">
                     <figure class="image">
@@ -31,30 +31,29 @@ layout: layout.html
                         </div>
                     </div>
                 </div>
-                <hr class="no-margin">
-                <div class="card-content">
-                    <div class="content>">
-                        <div class="masonry">
-                            {% for photos in collections.photos %}
-                            <a class="has-radius-normal" href={{ photos.url }}>
-                                <div class="masonry-item">
-                                    <img class="has-radius-normal must-responsive" src={{ photos.data.thumbnail }} alt="thumbnail">
+            </div>
+            <!-- photos card -->
+            <div class="masonry">
+                {% for photos in collections.photos %}
+                <div class="brick">
+                    <a href={{ photos.url }}>
+                        <div class="card">
+                            <!-- thumbnail -->
+                            <div class="card-image">
+                                <figure class="image">
+                                    <img src={{ photos.data.thumbnail}} alt="Thumbnail post">
+                                </figure>
+                            </div>
+                            <div class="card-content padding-08">
+                                <div class="content">
+                                    <p class="has-text-weight-semibold no-margin-bottom">{{ photos.data.title}}</p>
+                                    <p class="is-size-7">{{ photos.data.date | date: "%a, %d %b %Y" }}</p>
                                 </div>
-                            </a>
-                            {% endfor %}
-                        </div>    
-                    </div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-                <!-- here is footer -->
-                <footer class="card-footer">
-                    <div class="card-footer-item has-text-centered">
-                        <p class="is-size-7">
-                            © 2024 <a href="https://instagram.com/apoxicam">Apoxicam</a><br>
-                            Powered by <a href="https://www.11ty.dev/">Eleventy</a> and <a href="https://bulma.io/">Bulma</a><br>
-                            Sauce is available on <a href="/">Github</a>
-                        </p>
-                    </div>
-                </footer>
+                {% endfor %}
             </div>
         </div>
     </section>
