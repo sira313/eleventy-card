@@ -31,29 +31,31 @@ layout: layout.html
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- photos card -->
-            <div class="masonry">
-                {% for photos in collections.photos %}
-                <div class="brick">
-                    <a href={{ photos.url }}>
-                        <div class="card">
+                <!-- photos masonry -->
+                <div class="masonry">
+                    {% for photos in collections.photos %}
+                    <div class="brick">
+                        <a href={{ photos.url }}>
                             <!-- thumbnail -->
-                            <div class="card-image">
-                                <figure class="image">
-                                    <img src={{ photos.data.thumbnail}} alt="Thumbnail post">
-                                </figure>
-                            </div>
-                            <div class="card-content padding-08">
-                                <div class="content">
-                                    <p class="has-text-weight-semibold no-margin-bottom">{{ photos.data.title}}</p>
-                                    <p class="is-size-7">{{ photos.data.date | date: "%a, %d %b %Y" }}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+                            <figure class="image">
+                                <img src={{ photos.data.thumbnail}} alt="Thumbnail post">
+                            </figure>
+                        </a>
+                    </div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
+                <!-- here is footer -->
+				<footer class="card-footer">
+					<div class="card-footer-item has-text-centered">
+						<p class="is-size-7">
+							© 2024 <a href="https://instagram.com/apoxicam">Apoxicam</a><br>
+							This photos is licenced under
+							<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1">
+								CC BY-NC-ND 4.0
+							</a>
+						</p>
+					</div>
+				</footer>
             </div>
         </div>
     </section>
