@@ -14,6 +14,6 @@
     "@11ty/eleventy": "^2.0.1"
   },
   "devDependencies": {
-    "pagefind": "^1.1.0"
+    "@sardine/eleventy-plugin-tinyhtml": "^0.2.0"
   }
 }
