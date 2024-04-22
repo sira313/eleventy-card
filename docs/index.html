@@ -1,13 +1,20 @@
----
-title: Apoxicam
-description: I am not a photographer, but i took these photos
-keyword: mobile photography, team pixel
-author: Aris Pratama
-cover: /asset/index/cover.jpg
-profile: /asset/index/profile.jpg
-layout: layout.html
----
-<div class="container is-max-desktop">
+<!doctype html>
+<html lang="id">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="I am not a photographer, but i took these photos">
+		<meta name="keyword" content="mobile photography, team pixel">
+		<meta name="author" content="Aris Pratama">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/x-icon" href="/asset/favicon.ico">
+		<title>Apoxicam</title>
+		<link rel="stylesheet" href="/style.css">
+		<link href="https://css.gg/css" rel="stylesheet">
+		<script src="/all.js"></script>
+	</head>
+	<body class="has-bg-little-dark">
+		<main>
+			<div class="container is-max-desktop">
     <section class="hero">
         <div class="hero-body no-padding-mobile">
             <!-- here we go, card. you know my style -->
@@ -15,19 +22,19 @@ layout: layout.html
                 <!-- cover page -->
                 <div class="card-image">
                     <figure class="image">
-                        <img class="card-no-border-radius-mobile" src={{ cover }} alt="cover">
+                        <img class="card-no-border-radius-mobile" src=/asset/cover.jpg alt="cover">
                     </figure>
                 </div>
                 <div class="card-content">
                     <div class="media">
                         <div class="media-left">
                             <figure class="image is-48x48">
-                                <img class="has-radius-normal" src={{ profile }} alt="profile pic">
+                                <img class="has-radius-normal" src=/asset/profile.jpg alt="profile pic">
                             </figure>
                         </div>
                         <div class="media-content">
-                            <p class="title is-4">{{ author }}</p>
-                            <p class="subtitle is-6">@{{ title }}</p>
+                            <p class="title is-4">Aris Pratama</p>
+                            <p class="subtitle is-6">@Apoxicam</p>
                         </div>
                     </div>
                     <!-- here's nav bar -->
@@ -73,3 +80,6 @@ layout: layout.html
         </div>
     </section>
 </div>
+		</main>
+	</body>
+</html>
