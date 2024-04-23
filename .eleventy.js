@@ -1,8 +1,8 @@
-const tinyHTML = require('@sardine/eleventy-plugin-tinyhtml');
 const lazyImagesPlugin = require('eleventy-plugin-lazyimages');
+const eleventyPluginFilesMinifier = require("@sherby/eleventy-plugin-files-minifier");
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(lazyImagesPlugin);
-  eleventyConfig.addPlugin(tinyHTML);
+  eleventyConfig.addPlugin(eleventyPluginFilesMinifier);
   eleventyConfig.addPassthroughCopy("asset");
   eleventyConfig.addPassthroughCopy("all.js");
 }
