@@ -14,7 +14,6 @@
     "@11ty/eleventy": "^2.0.1"
   },
   "devDependencies": {
-    "@sardine/eleventy-plugin-tinyhtml": "^0.2.0",
     "@sherby/eleventy-plugin-files-minifier": "^1.1.1",
     "eleventy-plugin-lazyimages": "^2.1.2"
   }
