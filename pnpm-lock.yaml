@@ -12,9 +12,6 @@ importers:
         specifier: ^2.0.1
         version: 2.0.1
     devDependencies:
-      '@sardine/eleventy-plugin-tinyhtml':
-        specifier: ^0.2.0
-        version: 0.2.0
       '@sherby/eleventy-plugin-files-minifier':
         specifier: ^1.1.1
         version: 1.1.1
@@ -192,10 +189,6 @@ packages:
   '@nodelib/fs.walk@1.2.8':
     resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==}
     engines: {node: '>= 8'}
-
-  '@sardine/eleventy-plugin-tinyhtml@0.2.0':
-    resolution: {integrity: sha512-OJZTms3AWhbe5KK4zleA2HjdA6vjoLKo6iDVQZR6PxLLUttvArm2Vl/I4qhIh92TY/d59NoA34tFEQYnYDrIng==}
-    engines: {node: '>= 12'}
 
   '@sherby/eleventy-plugin-files-minifier@1.1.1':
     resolution: {integrity: sha512-3gVtq4H6IJ3/l4mRsTHAOG/5AY8NXgXd0w1EXaXImzEThAOQ++/Mr95dF9u9wTCmmv+57SeG62/tJibtyL8JRA==}
@@ -1369,10 +1362,6 @@ snapshots:
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.17.1
-
-  '@sardine/eleventy-plugin-tinyhtml@0.2.0':
-    dependencies:
-      html-minifier: 4.0.0
 
   '@sherby/eleventy-plugin-files-minifier@1.1.1':
     dependencies:
