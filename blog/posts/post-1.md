@@ -3,6 +3,8 @@ layout: post-blog.html
 title: Lorem Ipsum
 desc: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec cursus tortor. Ut eu quam consequat, gravida massa vel, luctus diam. Duis congue lacus eget magna faucibus sodales. Curabitur laoreet justo in libero faucibus, at laoreet risus lacinia.
 date: 2024-04-21
+tags:
+    - Ipsum
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sollicitudin ultrices nibh, et tristique mi interdum at. Maecenas quis tortor pellentesque, scelerisque lacus nec, feugiat urna. Cras dapibus metus mi, lobortis tempus nisi egestas eget. Duis feugiat vestibulum velit in blandit. Fusce tempus dolor vel ipsum interdum accumsan. Fusce in risus dolor. Ut commodo molestie cursus. In quis nunc dignissim enim tempus cursus. Nam ex lectus, vulputate ac est feugiat, rhoncus fringilla nisi. Quisque consequat aliquet orci, eget cursus orci elementum eu. Nam ut metus vestibulum, condimentum lacus vel, dignissim sem. Quisque feugiat nulla id rutrum facilisis. Phasellus efficitur tortor sit amet purus efficitur, interdum mattis ante dictum. Aenean vehicula lacinia turpis, vitae interdum nulla ornare sit amet. Aliquam gravida in mauris eu interdum. Fusce ut facilisis turpis.
 
