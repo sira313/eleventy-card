@@ -1,4 +1,5 @@
 ---
+layout: post-photos.html
 title: Daun
 desc: hac habitasse platea dictumst. Nunc hendrerit ultrices lectus, sed facilisis nisi lacinia quis.
 cover: /asset/photos/daun.jpg

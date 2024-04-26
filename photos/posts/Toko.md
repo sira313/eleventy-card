@@ -1,4 +1,5 @@
 ---
+layout: post-photos.html
 title: Toko
 desc: Vivamus quis ipsum at sapien vestibulum tincidunt. Maecenas quis libero et neque elementum scelerisque. Aenean dapibus dui ut fermentum rhoncus.
 cover: /asset/photos/toko.jpg
