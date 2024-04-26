@@ -26,8 +26,19 @@ layout: layout.html
                             <!-- help me with this search -->
                             <!-- i need input expand max width after click -->
                             <a class="navbar-item hoverable" href="#search"><i class="gg-search"></i></a>
-                            <!-- help me with tag filter -->
-                            <a class="navbar-item hoverable" href="#taglist"><i class="gg-menu"></i></a>
+                            <!-- tag filter -->
+                            <div class="navbar-item hoverable dropdown is-right" onclick="javascript:document.querySelector('.dropdown').classList.toggle('is-active')" 
+                            onblur="javascript:document.querySelector('.dropdown').classList.toggle('is-active')" aria-haspopup="true" aria-controls="dropdown-menu">
+                            <i class="gg-menu"></i>
+                                <div class="dropdown-menu" role="menu">
+                                    <div class="dropdown-content">
+                                        <div class="dropdown-item">
+                                            <!-- list tag here -->
+                                            <p><a href="#">Lorem</a></p>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
