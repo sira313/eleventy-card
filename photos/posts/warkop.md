@@ -1,4 +1,5 @@
 ---
+layout: post-photos.html
 title: Warkop
 desc: n hac habitasse platea dictumst. Nunc hendrerit ultrices lectus, sed facilisis nisi lacinia quis.
 cover: /asset/photos/warkop.jpg
