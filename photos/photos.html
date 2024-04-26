@@ -32,10 +32,12 @@ layout: layout.html
                             <i class="gg-menu"></i>
                                 <div class="dropdown-menu" role="menu">
                                     <div class="dropdown-content">
+                                        {% for tag in collections.photosTags %}
                                         <div class="dropdown-item">
                                             <!-- list tag here -->
-                                            <p><a href="#">Lorem</a></p>
+                                            <a href="/photos/tag/{{ tag | slugify }}">{{ tag }}</a>
                                         </div>
+                                        {% endfor %}
                                     </div> 
                                 </div>
                             </div>

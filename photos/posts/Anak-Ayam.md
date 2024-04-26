@@ -5,5 +5,7 @@ desc: Adalah suatu keisengan. Di kala merenung, melihat anak ayam datang mengham
 cover: /asset/photos/chick.jpg
 thumbnail: /asset/photos/thumbnail/chick.jpg
 date: 2024-04-21
+tags: Hewan
+
 ---
 Adalah suatu keisengan. Di kala merenung, melihat anak ayam datang menghampiri. Langsung aja jepret dah...
