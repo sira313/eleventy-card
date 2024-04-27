@@ -23,7 +23,7 @@
 						<div class="card-content has-no-padding-top-bottom">
 							<div class="navbar-brand">
 								<a class="navbar-item hoverable" href="/photos/"><i class="gg-menu-grid-r"></i></a>
-								<a class="navbar-item hoverable" href="/"><i class="gg-home"></i></a>
+								<a class="navbar-item hoverable" href="/"><i class="gg-home-alt"></i></a>
 								<div class="item-nav-end">
 									<a class="navbar-item hoverable fix-width" href="#share"><i class="gg-share"></i></a>
 								</div>
@@ -38,12 +38,31 @@
 						<div class="card-content">
 							<div class="content">
 								<p class="title is-4 margin-bottom-1">{{ title | default: "My Blog" }}</p>
+								<p class="is-size-7">{{ date | date: "%a, %d %b %Y" }}</p>
 								<p>
 									{{ content }}
 								</p>
-								<p class="has-text-right">{{ date | date: "%a, %d %b %Y" }}</p>
 							</div>
 						</div>
+						<!-- next prev -->
+						{%- if collections.photos %}
+						{%- assign previousPhotos = collections.photos | getPreviousCollectionItem %}
+						{%- assign nextPhotos = collections.photos | getNextCollectionItem %}
+						{%- if nextPhotos or previousPhotos %}
+						<div class="card-content" style="padding-top: 0;">
+							<div class="navbar-brand">
+								{%- if previousPhotos %}
+									<a class="navbar-item hoverable" href="{{ previousPhotos.url }}"><i class="gg-chevron-left-o"></i></a>
+								{% endif %}
+								<div class="item-nav-end">
+									{%- if nextPhotos %}
+									<a class="navbar-item hoverable" href="{{ nextPhotos.url }}"><i class="gg-chevron-right-o"></i></a>
+									{% endif %}
+								</div>
+							</div>
+						</div>
+						{% endif %}
+						{% endif %}
 						<!-- here is footer -->
 						<footer class="card-footer">
 							<div class="card-footer-item has-text-centered">

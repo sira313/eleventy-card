@@ -23,7 +23,7 @@
 						<div class="card-content has-no-padding-top-bottom">
 							<div class="navbar-brand">
 								<a class="navbar-item hoverable" href="/blog"><i class="gg-list"></i></a>
-								<a class="navbar-item hoverable" href="/"><i class="gg-home"></i></a>
+								<a class="navbar-item hoverable" href="/"><i class="gg-home-alt"></i></a>
 								<div class="item-nav-end">
 									<a class="navbar-item hoverable fix-width" href="#share"><i class="gg-share"></i></a>
 								</div>
@@ -39,6 +39,25 @@
 								</p>
 							</div>
 						</div>
+						<!-- next prev -->
+						{%- if collections.posts %}
+						{%- assign previousPost = collections.posts | getPreviousCollectionItem %}
+						{%- assign nextPost = collections.posts | getNextCollectionItem %}
+						{%- if nextPost or previousPost %}
+						<div class="card-content" style="padding-top: 0;">
+							<div class="navbar-brand">
+								{%- if previousPost %}
+									<a class="navbar-item hoverable" href="{{ previousPost.url }}"><i class="gg-chevron-left-o"></i></a>
+								{% endif %}
+								<div class="item-nav-end">
+									{%- if nextPost %}
+									<a class="navbar-item hoverable" href="{{ nextPost.url }}"><i class="gg-chevron-right-o"></i></a>
+									{% endif %}
+								</div>
+							</div>
+						</div>
+						{% endif %}
+						{% endif %}
 						<!-- here is footer -->
 						<footer class="card-footer">
 							<div class="card-footer-item has-text-centered">
