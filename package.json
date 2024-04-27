@@ -1,20 +1,28 @@
 {
-  "name": "apoxicam",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "npx @11ty/eleventy --serve",
-    "build": "npx @11ty/eleventy"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@11ty/eleventy": "^2.0.1"
-  },
-  "devDependencies": {
-    "@sherby/eleventy-plugin-files-minifier": "^1.1.1",
-    "eleventy-plugin-lazyimages": "^2.1.2"
-  }
+	"name": "eleventy-card",
+	"version": "0.0.1",
+	"description": "A starter project for photographer/artist showing their work and blog randomly",
+	"scripts": {
+		"start": "eleventy --serve",
+		"build": "eleventy"
+	},
+	"keywords": [
+		"eleventy",
+		"11ty",
+		"artist",
+		"blog",
+		"gallery"
+	],
+	"author": {
+		"name": "Sira Argia",
+		"url": "https://github.com/sira313"
+	},
+	"license": "MIT",
+	"dependencies": {
+		"@11ty/eleventy": "^2.0.1"
+	},
+	"devDependencies": {
+		"@sherby/eleventy-plugin-files-minifier": "^1.1.1",
+		"eleventy-plugin-lazyimages": "^2.1.2"
+	}
 }
