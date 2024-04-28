@@ -8,12 +8,12 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("all.js");
 	// Collection post blog
 	eleventyConfig.addCollection("posts", function (collectionApi) {
-		return collectionApi.getFilteredByGlob("blog/posts/**/*.md");
+		return collectionApi.getFilteredByGlob("blog/**/*.md");
 	});
 
 	// Collection post photos
 	eleventyConfig.addCollection("photos", function (collectionApi) {
-		return collectionApi.getFilteredByGlob("photos/posts/**/*.md");
+		return collectionApi.getFilteredByGlob("photos/**/*.md");
 	});
 
 	// Collection tags thanks chatgpt
