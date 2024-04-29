@@ -8,7 +8,7 @@ pagination:
 layout: layout.html
 permalink: /blog/tag/{{tag | slugify }}/index.html
 eleventyComputed:
-  title: Posts Tagged with "{{ tag }}"
+  title: "{{ tag }}"
 ---
 <div class="container is-max-desktop">
     <section class="hero">
@@ -24,7 +24,7 @@ eleventyComputed:
                 <!-- navbar -->
                 <div class="card-content has-no-padding-top-bottom" style="border-bottom: var(--bulma-card-footer-border-top);">
                     <div class="navbar-brand">
-                        <a class="navbar-item hoverable" href="/">{% feather "home" %}</a>
+                        <a class="navbar-item hoverable" href="/blog">{% feather "list" %}</a>
                         <div class="navbar-item has-text-weight-semibold">{{ title }}</div>
                         <div class="item-nav-end">
                             <!-- help me with this search -->
