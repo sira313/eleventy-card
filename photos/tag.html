@@ -1,4 +1,5 @@
 ---
+cover: /asset/index/cover.webp
 pagination:
   data: collections.photosTags
   size: 1
@@ -7,13 +8,72 @@ pagination:
 layout: layout.html
 permalink: /photos/tag/{{tag | slugify }}/index.html
 eleventyComputed:
-  title: Posts Tagged with "{{ tag }}"
+  title: "{{ tag }}"
 ---
-
-<h1>Posts Tagged with {{ tag }}</h1>
-
-{% for photos in collections[tag] %}
-  <li>
-    <a href="{{photos.url}}">{{photos.data.title}}</a>
-  </li>
-{% endfor %}
+<div class="container is-max-desktop">
+    <section class="hero">
+        <div class="hero-body no-padding-mobile">
+            <!-- card again -->
+            <div class="card no-border-radius-mobile">
+                <!-- cover page -->
+                <div class="card-image">
+                    <figure class="image">
+                        <img class="card-no-border-radius-mobile" src={{ cover }} alt="cover">
+                    </figure>
+                </div>
+                <!-- navbar -->
+                <div class="card-content has-no-padding-top-bottom" style="border-bottom: var(--bulma-card-footer-border-top);">
+                    <div class="navbar-brand">
+                        <a class="navbar-item hoverable" href="/photos/">{% feather "grid" %}</a>
+                        <div class="navbar-item has-text-weight-semibold">{{ title }}</div>
+                        <div class="item-nav-end">
+                            <!-- help me with this search -->
+                            <!-- i need input expand max width after click -->
+                            <a class="navbar-item hoverable" href="#search">{% feather "search" %}</a>
+                            <!-- tag filter -->
+                            <div class="navbar-item hoverable dropdown is-right" onclick="javascript:document.querySelector('.dropdown').classList.toggle('is-active')" 
+                            onblur="javascript:document.querySelector('.dropdown').classList.toggle('is-active')" aria-haspopup="true" aria-controls="dropdown-menu">
+                            {% feather "menu" %}
+                                <div class="dropdown-menu" role="menu">
+                                    <div class="dropdown-content">
+                                        {% for tag in collections.photosTags %}
+                                        <div class="dropdown-item">
+                                            <!-- list tag here -->
+                                            <a href="/photos/tag/{{ tag | slugify }}">{{ tag }}</a>
+                                        </div>
+                                        {% endfor %}
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- photos masonry -->
+                <div class="masonry">
+                  {% for photos in collections[tag] %}
+                    <div class="brick">
+                        <a href={{ photos.url }}>
+                            <!-- thumbnail -->
+                            <figure class="image">
+                                <img src={{ photos.data.thumbnail}} alt="Thumbnail post">
+                            </figure>
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+                <!-- here is footer -->
+				<footer class="card-footer">
+					<div class="card-footer-item has-text-centered">
+						<p class="is-size-7">
+							© 2024 <a href="https://instagram.com/apoxicam">Apoxicam</a><br>
+							This photos is licenced under
+							<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1">
+								CC BY-NC-ND 4.0
+							</a>
+						</p>
+					</div>
+				</footer>
+            </div>
+        </div>
+    </section>
+</div>

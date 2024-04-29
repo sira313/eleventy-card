@@ -1,4 +1,5 @@
 ---
+cover: /asset/index/cover.webp
 pagination:
   data: collections.blogTags
   size: 1
@@ -9,11 +10,70 @@ permalink: /blog/tag/{{tag | slugify }}/index.html
 eleventyComputed:
   title: Posts Tagged with "{{ tag }}"
 ---
-
-<h1>Posts Tagged with {{ tag }}</h1>
-
-{% for post in collections[tag] %}
-  <li>
-    <a href="{{post.url}}">{{post.data.title}}</a>
-  </li>
-{% endfor %}
+<div class="container is-max-desktop">
+    <section class="hero">
+        <div class="hero-body no-padding-mobile">
+            <!-- card again -->
+            <div class="card no-border-radius-mobile">
+                <!-- cover page -->
+                <div class="card-image">
+                    <figure class="image">
+                        <img class="card-no-border-radius-mobile" src={{ cover }} alt="cover">
+                    </figure>
+                </div>
+                <!-- navbar -->
+                <div class="card-content has-no-padding-top-bottom" style="border-bottom: var(--bulma-card-footer-border-top);">
+                    <div class="navbar-brand">
+                        <a class="navbar-item hoverable" href="/">{% feather "home" %}</a>
+                        <div class="navbar-item has-text-weight-semibold">{{ title }}</div>
+                        <div class="item-nav-end">
+                            <!-- help me with this search -->
+                            <!-- i need input expand max width after click -->
+                            <a class="navbar-item hoverable" href="#search">{% feather "search" %}</a>
+                            <!-- tag filter -->
+                            <div class="navbar-item hoverable dropdown is-right" onclick="javascript:document.querySelector('.dropdown').classList.toggle('is-active')" 
+                            onblur="javascript:document.querySelector('.dropdown').classList.toggle('is-active')" aria-haspopup="true" aria-controls="dropdown-menu">
+                            {% feather "menu" %}
+                                <div class="dropdown-menu" role="menu">
+                                    <div class="dropdown-content">
+                                        {% for tag in collections.blogTags %}
+                                        <div class="dropdown-item">
+                                            <!-- list tag here -->
+                                            <a href="/blog/tag/{{ tag | slugify }}">{{ tag }}</a>
+                                        </div>
+                                        {% endfor %}
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="content>">
+                        <ul>
+                            {% for post in collections[tag] %}
+                            <li class="content">
+                                <p class="no-margin-bottom is-size-5 has-text-weight-semibold"><a href="{{ post.url }}">{{ post.data.title }}</a></p>
+                                <!-- content preview -->
+                                <p>{{ post.data.desc }}</p>
+                                <!-- date post here -->
+                                <p class="is-size-7">{{ post.data.date | date: "%a, %d %b %Y" }}</p>
+                            </li>
+                            {% endfor %}
+                        </ul>    
+                    </div>
+                </div>
+                <!-- here is footer -->
+                <footer class="card-footer">
+                    <div class="card-footer-item has-text-centered">
+                        <p class="is-size-7">
+                            © 2024 <a href="https://instagram.com/apoxicam">Apoxicam</a><br>
+                            Powered by <a href="https://www.11ty.dev/">Eleventy</a> and <a href="https://bulma.io/">Bulma</a><br>
+                            Sauce is available on <a href="/">Github</a>
+                        </p>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </section>
+</div>
