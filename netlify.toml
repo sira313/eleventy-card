@@ -1,15 +1,19 @@
 [[headers]]
-  # Cache control for images, CSS, and JavaScript files
-  for = "/*.jpg"
+  for = "/asset/**/*.webp"
     [headers.values]
     Cache-Control = "public, max-age=3600"
 
 [[headers]]
-  for = "/*.css"
+  for = "/asset/**/*.jpg"
     [headers.values]
     Cache-Control = "public, max-age=3600"
 
 [[headers]]
-  for = "/*.js"
+  for = "/asset/css/*.css"
+    [headers.values]
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/asset/js/*.js"
     [headers.values]
     Cache-Control = "public, max-age=3600"
