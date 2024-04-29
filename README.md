@@ -14,13 +14,17 @@ Clone this repo
 ```
 git clone https://github.com/sira313/eleventy-card-bulma/
 ```
+Use PNPM
+```
+npm install -g pnpm
+```
 Install modules
 ```
-npm install
+pnpm install
 ```
 Run to your localhost 
 ```
-npm start
+pnpm start
 ```
 
 #### Menu
@@ -37,13 +41,15 @@ There is 3 layouts in [/_includes](/_includes/):
 #### Index
 There is 3 indexs in this project
 - [/index.html](/index.html) where you describe your own business. Basic knowledge of HTML and CSS needed here.
-- [/photos.html](/photos.html) is the index of all your photos.
-- [/blog.html](/blog.html) is the index of your blog.
+- [/photos/index.html](/photos/index.html) is the index of all your photos.
+- [/blog/index.html](/blog/blog.html) is the index of your blog.
 #### Post
-Use strip instead of space for post name file.
+Use strip instead of space for post name file. Exc: `your-title-post.md`
 ##### Photos
 Post a work using markdown in [/photos/post](/photos/post/) directory.
 ##### Blog
 Write your blog using markdown in [/blog/post](/blog/posts/) directory.
 #### Asset
 All assets are in [/asset](/asset/) directory and called in the frontmatter.
+#### Tips
+Better use [Squoosh](https://squoosh.app/) to convert your pic to webp
