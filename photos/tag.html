@@ -1,0 +1,19 @@
+---
+pagination:
+  data: collections.photosTags
+  size: 1
+  alias: tag
+  addAllPagesToCollections: true
+layout: layout.html
+permalink: /photos/tag/{{tag | slugify }}/index.html
+eleventyComputed:
+  title: Posts Tagged with "{{ tag }}"
+---
+
+<h1>Posts Tagged with {{ tag }}</h1>
+
+{% for photos in collections[tag] %}
+  <li>
+    <a href="{{photos.url}}">{{photos.data.title}}</a>
+  </li>
+{% endfor %}

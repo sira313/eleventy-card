@@ -35,7 +35,7 @@ layout: layout.html
                                         {% for tag in collections.blogTags %}
                                         <div class="dropdown-item">
                                             <!-- list tag here -->
-                                            <a href="/blog?tag={{ tag | slugify }}">{{ tag }}</a>
+                                            <a href="/blog/tag/{{ tag | slugify }}">{{ tag }}</a>
                                         </div>
                                         {% endfor %}
                                     </div> 
