@@ -22,10 +22,10 @@
 						<!-- navbar -->
 						<div class="card-content has-no-padding-top-bottom" style="border-bottom: var(--bulma-card-footer-border-top);">
 							<div class="navbar-brand">
-								<a class="navbar-item hoverable" href="/blog"><i class="gg-list"></i></a>
-								<a class="navbar-item hoverable" href="/"><i class="gg-home-alt"></i></a>
+								<a class="navbar-item hoverable" href="/blog">{% feather "list" %}</a>
+								<a class="navbar-item hoverable" href="/">{% feather "home" %}</a>
 								<div class="item-nav-end">
-									<a class="navbar-item hoverable fix-width" href="#share"><i class="gg-share"></i></a>
+									<a class="navbar-item hoverable fix-width" href="#share">{% feather "share-2" %}</a>
 								</div>
 							</div>
 						</div>
@@ -46,11 +46,11 @@
 						<div class="card-content" style="padding-top: 0;">
 							<div class="navbar-brand">
 								{%- if previousPost %}
-									<a class="navbar-item hoverable" href="{{ previousPost.url }}"><i class="gg-chevron-left-o"></i></a>
+									<a class="navbar-item hoverable" href="{{ previousPost.url }}">{% feather "arrow-left-circle" %}</a>
 								{% endif %}
 								<div class="item-nav-end">
 									{%- if nextPost %}
-									<a class="navbar-item hoverable" href="{{ nextPost.url }}"><i class="gg-chevron-right-o"></i></a>
+									<a class="navbar-item hoverable" href="{{ nextPost.url }}">{% feather "arrow-right-circle" %}</a>
 									{% endif %}
 								</div>
 							</div>
