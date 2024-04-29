@@ -1,7 +1,10 @@
 const lazyImagesPlugin = require("eleventy-plugin-lazyimages");
 const eleventyPluginFilesMinifier = require("@sherby/eleventy-plugin-files-minifier");
+const cacheBuster = require('@mightyplow/eleventy-plugin-cache-buster');
 
 module.exports = function (eleventyConfig) {
+	const cacheBusterOptions = {};
+    eleventyConfig.addPlugin(cacheBuster(cacheBusterOptions));
 	eleventyConfig.addPlugin(lazyImagesPlugin);
 	eleventyConfig.addPlugin(eleventyPluginFilesMinifier);
 	eleventyConfig.addPassthroughCopy("asset");
