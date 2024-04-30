@@ -34,12 +34,12 @@ There are 2 menus (for indexing post, not a single page) we created by default:
 
 So if you wanted to create another one, maybe [this tutorial](https://www.youtube.com/watch?v=kzf9A9tkkl4) will help.
 #### Layout
-There is 3 layouts in [/_includes](/_includes/):
+There are 3 layouts in [/_includes](/_includes/):
 - [/_includes/layout.html](/_includes/layout.html) is the main layout called in other layout frontmatter.
 - [/_includes/post-blog.html](/_includes/post-blog.html) is for [blog post layout](/blog/posts/).
 - [/_includes/post-photos.html](/_includes/post-photos.html) is for [photos post layout](/photos/).
 #### Index
-There is 3 indexs in this project
+There are 3 indexs in this project
 - [/index.html](/index.html) where you describe your own business. Basic knowledge of HTML and CSS needed here.
 - [/photos/index.html](/photos/index.html) is the index of all your photos.
 - [/blog/index.html](/blog/blog.html) is the index of your blog.
