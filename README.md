@@ -36,8 +36,8 @@ So if you wanted to create another one, maybe [this tutorial](https://www.youtub
 #### Layout
 There is 3 layouts in [/_includes](/_includes/):
 - [/_includes/layout.html](/_includes/layout.html) is the main layout called in other layout frontmatter.
-- [/_includes/blog.html](/_includes/blog.html) is for [blog post layout](/blog/posts/). It's called in blog [post.json](/blog/posts/posts.json).
-- [/_includes/photos.html](/_includes/photos.html) is for [photos post layout](/photos/). It's called in [photos.json](/photos/photos.json).
+- [/_includes/post-blog.html](/_includes/post-blog.html) is for [blog post layout](/blog/posts/).
+- [/_includes/post-photos.html](/_includes/post-photos.html) is for [photos post layout](/photos/).
 #### Index
 There is 3 indexs in this project
 - [/index.html](/index.html) where you describe your own business. Basic knowledge of HTML and CSS needed here.
@@ -52,4 +52,4 @@ Write your blog using markdown in [/blog/post](/blog/posts/) directory.
 #### Asset
 All assets are in [/asset](/asset/) directory and called in the frontmatter.
 #### Tips
-Better use [Squoosh](https://squoosh.app/) to convert your pic to webp
+Better use [Squoosh](https://squoosh.app/) to convert your pics to webp
