@@ -5,7 +5,7 @@
 
 Powered by 
 
-![Eleventy](https://a11ybadges.com/badge?logo=eleventy)![Bulma](https://a11ybadges.com/badge?logo=bulma)![Bulma](https://a11ybadges.com/badge?text=feathericons&badgeColor=purple)
+[![Eleventy](https://a11ybadges.com/badge?logo=eleventy)](https://www.11ty.dev/)[![Bulma](https://a11ybadges.com/badge?logo=bulma)](https://bulma.io/)[![Bulma](https://a11ybadges.com/badge?text=feathericons&badgeColor=purple)](https://feathericons.com/)
 
 ---
 
