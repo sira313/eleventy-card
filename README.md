@@ -1,13 +1,13 @@
 ## Eleventy Card
 #### A starter project for photographer/artist showing their work and blog randomly
-#### [eleventy-card.netlify.app](https://eleventy-card.netlify.app/)
----
-
-Powered by
-
-![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7)![Bulma](https://img.shields.io/badge/bulma-00D0B1?style=for-the-badge&logo=bulma&logoColor=white)
-
+#### [eleventy-card.netlify.app](https://eleventy-card.netlify.app/) 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/d32e682c-0084-4b0e-96e3-286b816a5033/deploy-status)](https://app.netlify.com/sites/eleventy-card/deploys)
+
+Powered by 
+
+![Eleventy](https://a11ybadges.com/badge?logo=eleventy)![Bulma](https://a11ybadges.com/badge?logo=bulma)![Bulma](https://a11ybadges.com/badge?text=feathericons&badgeColor=purple)
+
+---
 
 ### Basic Info
 Clone this repo
