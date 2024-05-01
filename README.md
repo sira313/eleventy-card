@@ -42,7 +42,7 @@ There are 3 layouts in [/_includes](/_includes/):
 There are 3 indexs in this project
 - [/index.html](/index.html) where you describe your own business. Basic knowledge of HTML and CSS needed here.
 - [/photos/index.html](/photos/index.html) is the index of all your photos.
-- [/blog/index.html](/blog/blog.html) is the index of your blog.
+- [/blog/index.html](/blog/index.html) is the index of your blog.
 #### Post
 Use strip instead of space for post name file. Exc: `your-title-post.md`
 ##### Photos
