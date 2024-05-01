@@ -36,8 +36,8 @@ So if you wanted to create another one, maybe [this tutorial](https://www.youtub
 #### Layout
 There are 3 layouts in [/_includes](/_includes/):
 - [/_includes/layout.html](/_includes/layout.html) is the main layout called in other layout frontmatter.
-- [/_includes/post-blog.html](/_includes/post-blog.html) is for [blog post layout](/blog/posts/).
-- [/_includes/post-photos.html](/_includes/post-photos.html) is for [photos post layout](/photos/).
+- [/_includes/post-blog.html](/_includes/post-blog.html) is for blog post layout.
+- [/_includes/post-photos.html](/_includes/post-photos.html) is photos post layout.
 #### Index
 There are 3 indexs in this project
 - [/index.md](/index.md) where you describe your own business.
