@@ -37,10 +37,8 @@ eleventyComputed:
                                 <div class="dropdown-menu" role="menu">
                                     <div class="dropdown-content">
                                         {% for tag in collections.photosTags %}
-                                        <div class="dropdown-item">
                                             <!-- list tag here -->
-                                            <a href="/photos/tag/{{ tag | slugify }}">{{ tag }}</a>
-                                        </div>
+                                        <a class="dropdown-item" href="/photos/tag/{{ tag | slugify }}">{{ tag }}</a>
                                         {% endfor %}
                                     </div> 
                                 </div>
