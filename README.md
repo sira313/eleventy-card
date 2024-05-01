@@ -40,7 +40,7 @@ There are 3 layouts in [/_includes](/_includes/):
 - [/_includes/post-photos.html](/_includes/post-photos.html) is for [photos post layout](/photos/).
 #### Index
 There are 3 indexs in this project
-- [/index.md](/index.md) where you describe your own business. Basic knowledge of HTML and CSS needed here.
+- [/index.md](/index.md) where you describe your own business.
 - [/photos/index.html](/photos/index.html) is the index of all your photos.
 - [/blog/index.html](/blog/index.html) is the index of your blog.
 #### Post
