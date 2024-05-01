@@ -46,9 +46,9 @@ There are 3 indexs in this project
 #### Post
 Use strip instead of space for post name file. Exc: `your-title-post.md`
 ##### Photos
-Post a work using markdown in [/photos/post](/photos/post/) directory.
+Post a work using markdown in [/photos](/photos/) directory.
 ##### Blog
-Write your blog using markdown in [/blog/post](/blog/posts/) directory.
+Write your blog using markdown in [/blog](/blog) directory.
 #### Asset
 All assets are in [/asset](/asset/) directory and called in the frontmatter.
 #### Tips
