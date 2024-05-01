@@ -1,7 +1,8 @@
 ---
 layout: post-photos.html
 title: Warkop
-desc: n hac habitasse platea dictumst. Nunc hendrerit ultrices lectus, sed facilisis nisi lacinia quis.
+description: n hac habitasse platea dictumst. Nunc hendrerit ultrices lectus, sed facilisis nisi lacinia quis.
+keyword: habitase, platea, nunc
 cover: /asset/photos/warkop.jpg
 thumbnail: /asset/photos/thumbnail/warkop.jpg
 date: 2024-04-21

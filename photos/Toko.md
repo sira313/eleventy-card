@@ -1,7 +1,8 @@
 ---
 layout: post-photos.html
 title: Toko
-desc: Vivamus quis ipsum at sapien vestibulum tincidunt. Maecenas quis libero et neque elementum scelerisque. Aenean dapibus dui ut fermentum rhoncus.
+description: Vivamus quis ipsum at sapien vestibulum tincidunt. Maecenas quis libero et neque elementum scelerisque. Aenean dapibus dui ut fermentum rhoncus.
+keyword: Vivamus, Ipsum, Sapien
 cover: /asset/photos/toko.jpg
 thumbnail: /asset/photos/thumbnail/toko.jpg
 date: 2024-04-21
