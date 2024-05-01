@@ -1,7 +1,8 @@
 ---
 layout: post-photos.html
 title: Daun
-desc: hac habitasse platea dictumst. Nunc hendrerit ultrices lectus, sed facilisis nisi lacinia quis.
+description: hac habitasse platea dictumst. Nunc hendrerit ultrices lectus, sed facilisis nisi lacinia quis.
+keyword: Habitase, dictumst
 cover: /asset/photos/daun.jpg
 thumbnail: /asset/photos/thumbnail/daun.jpg
 date: 2024-04-21

@@ -1,82 +1,68 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="description" content="{{ desc }}">
-		<meta name="keyword" content="{{ keyword }}">
-		<meta name="author" content="{{ author }}">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="icon" type="image/x-icon" href="/asset/index/favicon.ico">
-		<title>{{ title }}</title>
-		<link rel="stylesheet" href="/asset/css/style.css">
-		<link rel="stylesheet" href="/asset/css/bulma.css">
-		<script src="/asset/js/all.js"></script>
-	</head>
-	<body class="has-bg-little-dark">
-		<div class="container is-max-desktop">
-			<section class="hero">
-				<div class="hero-body no-padding-mobile">
-					<!-- card and card again -->
-					<div class="card no-border-radius-mobile">
-						<!-- navbar -->
-						<div class="card-content has-no-padding-top-bottom">
-							<div class="navbar-brand">
-								<a class="navbar-item hoverable" href="/photos/">{% feather "grid" %}</a>
-								<a class="navbar-item hoverable" href="/">{% feather "home" %}</a>
-								<div class="item-nav-end">
-									<a class="navbar-item hoverable fix-width" href="#share">{% feather "share-2" %}</a>
-								</div>
-							</div>
+---
+layout: layout.html
+---
+<div class="container is-max-desktop">
+	<section class="hero">
+		<div class="hero-body no-padding-mobile">
+			<!-- card and card again -->
+			<div class="card no-border-radius-mobile">
+				<!-- navbar -->
+				<div class="card-content has-no-padding-top-bottom">
+					<div class="navbar-brand">
+						<a class="navbar-item hoverable" href="/photos/">{% feather "grid" %}</a>
+						<a class="navbar-item hoverable" href="/">{% feather "home" %}</a>
+						<div class="item-nav-end">
+							<a class="navbar-item hoverable fix-width" href="#share">{% feather "share-2" %}</a>
 						</div>
-						<!-- cover page -->
-						<div class="card-image">
-							<figure class="image">
-								<img class="card-no-border-radius-mobile" src={{ cover }} alt="cover">
-							</figure>
-						</div>
-						<div class="card-content">
-							<div class="content">
-								<p class="title is-4 margin-bottom-1">{{ title | default: "My Blog" }}</p>
-								<p class="is-size-7">{{ date | date: "%a, %d %b %Y" }}</p>
-								<p>
-									{{ content }}
-								</p>
-							</div>
-						</div>
-						<!-- next prev -->
-						{%- if collections.photos %}
-						{%- assign previousPhotos = collections.photos | getPreviousCollectionItem %}
-						{%- assign nextPhotos = collections.photos | getNextCollectionItem %}
-						{%- if nextPhotos or previousPhotos %}
-						<div class="card-content" style="padding-top: 0;">
-							<div class="navbar-brand">
-								{%- if previousPhotos %}
-									<a class="navbar-item hoverable" href="{{ previousPhotos.url }}">{% feather "arrow-left-circle" %}</a>
-								{% endif %}
-								<div class="item-nav-end">
-									{%- if nextPhotos %}
-									<a class="navbar-item hoverable" href="{{ nextPhotos.url }}">{% feather "arrow-right-circle" %}</a>
-									{% endif %}
-								</div>
-							</div>
-						</div>
-						{% endif %}
-						{% endif %}
-						<!-- here is footer -->
-						<footer class="card-footer">
-							<div class="card-footer-item has-text-centered">
-								<p class="is-size-7">
-									© 2024 <a href="https://instagram.com/apoxicam">Apoxicam</a><br>
-									This photos is licenced under
-									<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1">
-										CC BY-NC-ND 4.0
-									</a>
-								</p>
-							</div>
-						</footer>
 					</div>
 				</div>
-			</section>
+				<!-- cover page -->
+				<div class="card-image">
+					<figure class="image">
+						<img class="card-no-border-radius-mobile" src={{ cover }} alt="cover">
+					</figure>
+				</div>
+				<div class="card-content">
+					<div class="content">
+						<p class="title is-4 margin-bottom-1">{{ title | default: "My Blog" }}</p>
+						<p class="is-size-7">{{ date | date: "%a, %d %b %Y" }}</p>
+						<p>
+							{{ content }}
+						</p>
+					</div>
+				</div>
+				<!-- next prev -->
+				{%- if collections.photos %}
+				{%- assign previousPhotos = collections.photos | getPreviousCollectionItem %}
+				{%- assign nextPhotos = collections.photos | getNextCollectionItem %}
+				{%- if nextPhotos or previousPhotos %}
+				<div class="card-content" style="padding-top: 0;">
+					<div class="navbar-brand">
+						{%- if previousPhotos %}
+							<a class="navbar-item hoverable" href="{{ previousPhotos.url }}">{% feather "arrow-left-circle" %}</a>
+						{% endif %}
+						<div class="item-nav-end">
+							{%- if nextPhotos %}
+							<a class="navbar-item hoverable" href="{{ nextPhotos.url }}">{% feather "arrow-right-circle" %}</a>
+							{% endif %}
+						</div>
+					</div>
+				</div>
+				{% endif %}
+				{% endif %}
+				<!-- here is footer -->
+				<footer class="card-footer">
+					<div class="card-footer-item has-text-centered">
+						<p class="is-size-7">
+							© 2024 <a href="https://instagram.com/apoxicam">Apoxicam</a><br>
+							This photos is licenced under
+							<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1">
+								CC BY-NC-ND 4.0
+							</a>
+						</p>
+					</div>
+				</footer>
+			</div>
 		</div>
-	</body>
-</html>
+	</section>
+</div>

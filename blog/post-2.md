@@ -1,7 +1,8 @@
 ---
 layout: post-blog.html
 title: In hac habitasse platea dictumst
-desc: In hac habitasse platea dictumst. Nunc hendrerit ultrices lectus, sed facilisis nisi lacinia quis. Nunc nulla libero, consequat at arcu sit amet, sollicitudin placerat nisl. Praesent mollis nulla maximus nisl tristique, ac tempor enim cursus
+description: In hac habitasse platea dictumst. Nunc hendrerit ultrices lectus, sed facilisis nisi lacinia quis. Nunc nulla libero, consequat at arcu sit amet, sollicitudin placerat nisl. Praesent mollis nulla maximus nisl tristique, ac tempor enim cursus
+keyword: Dolor, Orci, Posuere
 date: 2024-04-21
 tags:
     - Dolor

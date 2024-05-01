@@ -1,74 +1,60 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="description" content="{{ desc }}">
-		<meta name="keyword" content="{{ keyword }}">
-		<meta name="author" content="{{ author }}">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="icon" type="image/x-icon" href="/asset/index/favicon.ico">
-		<title>{{ title }}</title>
-		<link rel="stylesheet" href="/asset/css/style.css">
-		<link rel="stylesheet" href="/asset/css/bulma.css">
-		<script src="/asset/js/all.js"></script>
-	</head>
-	<body class="has-bg-little-dark">
-		<div class="container is-max-desktop">
-			<section class="hero">
-				<div class="hero-body no-padding-mobile">
-					<!-- card and card again -->
-					<div class="card no-border-radius-mobile">
-						<!-- navbar -->
-						<div class="card-content has-no-padding-top-bottom" style="border-bottom: var(--bulma-card-footer-border-top);">
-							<div class="navbar-brand">
-								<a class="navbar-item hoverable" href="/blog">{% feather "list" %}</a>
-								<a class="navbar-item hoverable" href="/">{% feather "home" %}</a>
-								<div class="item-nav-end">
-									<a class="navbar-item hoverable fix-width" href="#share">{% feather "share-2" %}</a>
-								</div>
-							</div>
+---
+layout: layout.html
+---
+<div class="container is-max-desktop">
+	<section class="hero">
+		<div class="hero-body no-padding-mobile">
+			<!-- card and card again -->
+			<div class="card no-border-radius-mobile">
+				<!-- navbar -->
+				<div class="card-content has-no-padding-top-bottom" style="border-bottom: var(--bulma-card-footer-border-top);">
+					<div class="navbar-brand">
+						<a class="navbar-item hoverable" href="/blog">{% feather "list" %}</a>
+						<a class="navbar-item hoverable" href="/">{% feather "home" %}</a>
+						<div class="item-nav-end">
+							<a class="navbar-item hoverable fix-width" href="#share">{% feather "share-2" %}</a>
 						</div>
-						<div class="card-content">
-							<div class="content">
-								<p class="title is-4 margin-bottom-1">{{ title | default: "My Blog" }}</p>
-								<p class="is-size-7">{{ date | date: "%a, %d %b %Y" }}</p>
-								<p>
-									{{ content }}
-								</p>
-							</div>
-						</div>
-						<!-- next prev -->
-						{%- if collections.posts %}
-						{%- assign previousPost = collections.posts | getPreviousCollectionItem %}
-						{%- assign nextPost = collections.posts | getNextCollectionItem %}
-						{%- if nextPost or previousPost %}
-						<div class="card-content" style="padding-top: 0;">
-							<div class="navbar-brand">
-								{%- if previousPost %}
-									<a class="navbar-item hoverable" href="{{ previousPost.url }}">{% feather "arrow-left-circle" %}</a>
-								{% endif %}
-								<div class="item-nav-end">
-									{%- if nextPost %}
-									<a class="navbar-item hoverable" href="{{ nextPost.url }}">{% feather "arrow-right-circle" %}</a>
-									{% endif %}
-								</div>
-							</div>
-						</div>
-						{% endif %}
-						{% endif %}
-						<!-- here is footer -->
-						<footer class="card-footer">
-							<div class="card-footer-item has-text-centered">
-								<p class="is-size-7">
-									© 2024 <a href="https://instagram.com/apoxicam">Apoxicam</a><br>
-									Powered by <a href="https://www.11ty.dev/">Eleventy</a> and <a href="https://bulma.io/">Bulma</a><br>
-									Sauce is available on <a href="/">Github</a>
-								</p>
-							</div>
-						</footer>
 					</div>
 				</div>
-			</section>
+				<div class="card-content">
+					<div class="content">
+						<p class="title is-4 margin-bottom-1">{{ title | default: "My Blog" }}</p>
+						<p class="is-size-7">{{ date | date: "%a, %d %b %Y" }}</p>
+						<p>
+							{{ content }}
+						</p>
+					</div>
+				</div>
+				<!-- next prev -->
+				{%- if collections.posts %}
+				{%- assign previousPost = collections.posts | getPreviousCollectionItem %}
+				{%- assign nextPost = collections.posts | getNextCollectionItem %}
+				{%- if nextPost or previousPost %}
+				<div class="card-content" style="padding-top: 0;">
+					<div class="navbar-brand">
+						{%- if previousPost %}
+							<a class="navbar-item hoverable" href="{{ previousPost.url }}">{% feather "arrow-left-circle" %}</a>
+						{% endif %}
+						<div class="item-nav-end">
+							{%- if nextPost %}
+							<a class="navbar-item hoverable" href="{{ nextPost.url }}">{% feather "arrow-right-circle" %}</a>
+							{% endif %}
+						</div>
+					</div>
+				</div>
+				{% endif %}
+				{% endif %}
+				<!-- here is footer -->
+				<footer class="card-footer">
+					<div class="card-footer-item has-text-centered">
+						<p class="is-size-7">
+							© 2024 <a href="https://instagram.com/apoxicam">Apoxicam</a><br>
+							Powered by <a href="https://www.11ty.dev/">Eleventy</a> and <a href="https://bulma.io/">Bulma</a><br>
+							Sauce is available on <a href="/">Github</a>
+						</p>
+					</div>
+				</footer>
+			</div>
 		</div>
-	</body>
-</html>
+	</section>
+</div>
