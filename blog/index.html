@@ -44,7 +44,7 @@ layout: layout.html
                 <div class="card-content">
                     <div class="content>">
                         <ul>
-                            {% for post in collections.posts %}
+                            {% for post in collections.posts reversed %}
                             <li class="content">
                                 <p class="no-margin-bottom is-size-5 has-text-weight-semibold"><a href="{{ post.url }}">{{ post.data.title }}</a></p>
                                 <!-- content preview -->
