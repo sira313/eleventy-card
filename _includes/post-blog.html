@@ -32,12 +32,12 @@ layout: layout.html
 				{%- if nextPost or previousPost %}
 				<div class="card-content" style="padding-top: 0;">
 					<div class="navbar-brand">
-						{%- if previousPost %}
-							<a class="navbar-item hoverable" href="{{ previousPost.url }}">{% feather "arrow-left-circle" %}</a>
+						{%- if nextPost %}
+							<a class="navbar-item hoverable" href="{{ nextPost.url }}">{% feather "arrow-left-circle" %}</a>
 						{% endif %}
 						<div class="item-nav-end">
-							{%- if nextPost %}
-							<a class="navbar-item hoverable" href="{{ nextPost.url }}">{% feather "arrow-right-circle" %}</a>
+							{%- if previousPost %}
+							<a class="navbar-item hoverable" href="{{ previousPost.url }}">{% feather "arrow-right-circle" %}</a>
 							{% endif %}
 						</div>
 					</div>
