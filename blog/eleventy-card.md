@@ -7,7 +7,7 @@ date: 2024-05-02
 tags:
  - Hello World
 ---
-Eleventy Card is a starter project for photographer/artist showing their work and blog randomly. I created this website with Eleventy, Bulma, and Feathericon because I enjoy photography and blogging. The source code is available on GitHub, just check the navbar.
+Eleventy Card is a starter project for photographer/artist showing their work and blog randomly. I use `*.html` for default layout cause i don't understand nunjucks or any other. Everything i wrote to build this template is just copy paste, so...
 >I apologize for any shortcomings as I am not a coder by background.
 
 ### Basic Info
