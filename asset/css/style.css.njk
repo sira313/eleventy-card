@@ -98,3 +98,18 @@ permalink: /asset/css/style.css
     align-items: stretch;
     display: flex;
   }
+
+  /* scrollbar*/
+  ::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+  }
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0); 
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--bulma-scheme-h),var(--bulma-scheme-s),var(--bulma-border-l)); 
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(85, 85, 85, 0.40); 
+  }
