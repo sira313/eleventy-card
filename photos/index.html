@@ -43,7 +43,7 @@ layout: layout.html
                 </div>
                 <!-- photos masonry -->
                 <div class="masonry">
-                    {% for photos in collections.photos %}
+                    {% for photos in collections.photos reversed %}
                     <div class="brick">
                         <a href={{ photos.url }}>
                             <!-- thumbnail -->

@@ -38,12 +38,12 @@ layout: layout.html
 				{%- if nextPhotos or previousPhotos %}
 				<div class="card-content" style="padding-top: 0;">
 					<div class="navbar-brand">
-						{%- if previousPhotos %}
-							<a class="navbar-item hoverable" href="{{ previousPhotos.url }}">{% feather "arrow-left-circle" %}</a>
+						{%- if nextPhotos %}
+							<a class="navbar-item hoverable" href="{{ nextPhotos.url }}">{% feather "arrow-left-circle" %}</a>
 						{% endif %}
 						<div class="item-nav-end">
-							{%- if nextPhotos %}
-							<a class="navbar-item hoverable" href="{{ nextPhotos.url }}">{% feather "arrow-right-circle" %}</a>
+							{%- if previousPhotos %}
+							<a class="navbar-item hoverable" href="{{ previousPhotos.url }}">{% feather "arrow-right-circle" %}</a>
 							{% endif %}
 						</div>
 					</div>
