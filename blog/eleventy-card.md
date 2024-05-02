@@ -35,23 +35,23 @@ There are 2 menus (for indexing post, not a single page) we created by default:
 
 So if you wanted to create another one, maybe [this tutorial](https://www.youtube.com/watch?v=kzf9A9tkkl4) will help.
 #### Layout
-There are 3 layouts in [/_includes](/_includes/):
-- [/_includes/layout.html](/_includes/layout.html) is the main layout called in other layout frontmatter.
-- [/_includes/post-blog.html](/_includes/post-blog.html) is for [blog post layout](/blog/posts/).
-- [/_includes/post-photos.html](/_includes/post-photos.html) is for [photos post layout](/photos/).
+There are 3 layouts in `/_includes`:
+- `/_includes/layout.html` is the main layout called in other layout frontmatter.
+- `/_includes/post-blog.html` is for blog post layout.
+- `/_includes/post-photos.html` is for photos post layout.
 #### Index
 There are 3 indexs in this project
-- [/index.md](/index.md) where you describe your own business.
-- [/photos/index.html](/photos/index.html) is the index of all your photos.
-- [/blog/index.html](/blog/index.html) is the index of your blog.
+- `/index.md` where you describe your own business.
+- `/photos/index.html` is the index of all your photos.
+- `/blog/index.html` is the index of your blog.
 #### Post
 Use strip instead of space for post name file. Exc: `your-title-post.md`
 ##### Photos
-Post a work using markdown in [/photos](/photos/) directory.
+Post a work using markdown in `/photos` directory.
 ##### Blog
-Write your blog using markdown in [/blog](/blog) directory.
+Write your blog using markdown in `/blog` directory.
 #### Asset
-All assets are in [/asset](/asset/) directory and called in the frontmatter.
+All assets are in `/asset` directory and called in the frontmatter.
 #### Tips
 Better use [Squoosh](https://squoosh.app/) to convert your pics to webp
 
