@@ -49,7 +49,7 @@ eleventyComputed:
                 <div class="card-content">
                     <div class="content>">
                         <ul>
-                            {% for post in collections[tag] %}
+                            {% for post in collections[tag] reversed %}
                             <li class="content">
                                 <p class="no-margin-bottom is-size-5 has-text-weight-semibold"><a href="{{ post.url }}">{{ post.data.title }}</a></p>
                                 <!-- content preview -->

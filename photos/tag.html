@@ -48,7 +48,7 @@ eleventyComputed:
                 </div>
                 <!-- photos masonry -->
                 <div class="masonry">
-                  {% for photos in collections[tag] %}
+                  {% for photos in collections[tag] reversed %}
                     <div class="brick">
                         <a href={{ photos.url }}>
                             <!-- thumbnail -->
