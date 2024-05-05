@@ -4,6 +4,21 @@ permalink: /asset/css/style.css
 ---
 /* custom */
 
+.modal-image img {
+  max-width: 100%;
+  height: auto;
+  max-height: calc(100vh - 10rem);
+  object-fit: contain;
+}
+
+/* table horizontal scroll*/
+table {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+  background-color: var(--bulma-content-blockquote-background-color);
+}
+
 /* masonry */
 /* from https://codepen.io/georgegriff/pen/XWjxvBa */
 .masonry {
@@ -101,8 +116,8 @@ permalink: /asset/css/style.css
 
   /* scrollbar*/
   ::-webkit-scrollbar {
-    width: 7px;
-    height: 7px;
+    width: 5px;
+    height: 5px;
   }
   ::-webkit-scrollbar-track {
     background: rgba(0, 0, 0, 0); 

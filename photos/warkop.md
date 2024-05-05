@@ -1,5 +1,6 @@
 ---
 layout: post-photos.html
+id: warkop
 title: Warkop
 description: n hac habitasse platea dictumst. Nunc hendrerit ultrices lectus, sed facilisis nisi lacinia quis.
 keyword: habitase, platea, nunc

@@ -1,7 +1,7 @@
 ---
-title: Photos
-description: I am not a writer, but this blog is randomly i wrote everything i like
-keyword: mobile photography, team pixel
+title: Apoxicam Photos
+description: Saya bukanlah seorang fotografer, tapi saya suka memfoto apa yang menurut saya bagus sembari belajar.
+keyword: apoxicam, apoxicam photos, photos
 cover: /asset/index/cover.webp
 layout: layout.html
 ---
@@ -23,8 +23,8 @@ layout: layout.html
                         <div class="navbar-item has-text-weight-semibold">{{ title }}</div>
                         <div class="item-nav-end">
                             <!-- help me with this search -->
-                            <!-- i need input expand max width after click -->
-                            <a class="navbar-item hoverable" href="#search">{% feather "search" %}</a>
+                            <!-- Search modal -->
+                            <a class="modal-trigger navbar-item hoverable" a href="#searchPhotos">{% feather "search" %}</a>
                             <!-- tag filter -->
                             <div class="navbar-item hoverable dropdown is-right" onclick="javascript:document.querySelector('.dropdown').classList.toggle('is-active')" 
                             onblur="javascript:document.querySelector('.dropdown').classList.toggle('is-active')" aria-haspopup="true" aria-controls="dropdown-menu">
@@ -45,7 +45,7 @@ layout: layout.html
                 <div class="masonry">
                     {% for photos in collections.photos reversed %}
                     <div class="brick">
-                        <a href={{ photos.url }}>
+                        <a href="#{{ photos.data.id }}" class="modal-trigger">
                             <!-- thumbnail -->
                             <figure class="image">
                                 <img src={{ photos.data.thumbnail}} alt="Thumbnail post">
@@ -57,9 +57,9 @@ layout: layout.html
                 <!-- here is footer -->
 				<footer class="card-footer">
 					<div class="card-footer-item has-text-centered">
-						<p class="is-size-7">
+						<p class="is-size-7 has-text-weight-semibold">
 							© 2024 <a href="https://instagram.com/apoxicam">Apoxicam</a><br>
-							This post's photos (except the cover) is licenced under
+							All photos are licenced under
 							<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1">
 								CC BY-NC-ND 4.0
 							</a>

@@ -28,8 +28,8 @@ eleventyComputed:
                         <div class="navbar-item has-text-weight-semibold">{{ title }}</div>
                         <div class="item-nav-end">
                             <!-- help me with this search -->
-                            <!-- i need input expand max width after click -->
-                            <a class="navbar-item hoverable" href="#search">{% feather "search" %}</a>
+                            <!-- Search modal -->
+                            <a class="modal-trigger navbar-item hoverable" a href="#searchPhotos">{% feather "search" %}</a>
                             <!-- tag filter -->
                             <div class="navbar-item hoverable dropdown is-right" onclick="javascript:document.querySelector('.dropdown').classList.toggle('is-active')" 
                             onblur="javascript:document.querySelector('.dropdown').classList.toggle('is-active')" aria-haspopup="true" aria-controls="dropdown-menu">
@@ -50,7 +50,7 @@ eleventyComputed:
                 <div class="masonry">
                   {% for photos in collections[tag] reversed %}
                     <div class="brick">
-                        <a href={{ photos.url }}>
+                        <a href="#{{ photos.data.id }}" class="modal-trigger">
                             <!-- thumbnail -->
                             <figure class="image">
                                 <img src={{ photos.data.thumbnail}} alt="Thumbnail post">
