@@ -1,6 +1,5 @@
 ---
 layout: post-photos.html
-id: Daun
 title: Daun
 description: hac habitasse platea dictumst. Nunc hendrerit ultrices lectus, sed facilisis nisi lacinia quis.
 keyword: Habitase, dictumst
