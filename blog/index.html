@@ -1,7 +1,7 @@
 ---
-title: Blog
-description: I am not a writer, but this blog is randomly i wrote everything i like
-keyword: mobile photography, team pixel
+title: Apoxicam Blog
+description: Saya bukan penulis, saya hanya ingin mendokumentasikan apa yang menurut saya penting kepada dunia.
+keyword: blog, apoxicam blog, apoxicam
 cover: /asset/index/cover.webp
 layout: layout.html
 ---
@@ -23,8 +23,8 @@ layout: layout.html
                         <div class="navbar-item has-text-weight-semibold">{{ title }}</div>
                         <div class="item-nav-end">
                             <!-- help me with this search -->
-                            <!-- i need input expand max width after click -->
-                            <a class="navbar-item hoverable" href="#search">{% feather "search" %}</a>
+                            <!-- Search modal -->
+                            <a class="modal-trigger navbar-item hoverable" a href="#searchBlog">{% feather "search" %}</a>
                             <!-- tag filter -->
                             <div class="navbar-item hoverable dropdown is-right" onclick="javascript:document.querySelector('.dropdown').classList.toggle('is-active')" 
                             onblur="javascript:document.querySelector('.dropdown').classList.toggle('is-active')" aria-haspopup="true" aria-controls="dropdown-menu">
@@ -59,7 +59,7 @@ layout: layout.html
                 <!-- here is footer -->
                 <footer class="card-footer">
                     <div class="card-footer-item has-text-centered">
-                        <p class="is-size-7">
+                        <p class="is-size-7 has-text-weight-semibold">
                             © 2024 <a href="https://instagram.com/apoxicam">Apoxicam</a><br>
                             Powered by <a href="https://www.11ty.dev/">Eleventy</a> and <a href="https://bulma.io/">Bulma</a><br>
                             Sauce is available on <a href="https://github.com/sira313/eleventy-card">Github</a>

@@ -1,5 +1,6 @@
 ---
 layout: post-photos.html
+id: anakAyam
 title: Anak Ayam
 description: Adalah suatu keisengan. Di kala merenung, melihat anak ayam datang menghampiri. Langsung aja jepret dah
 keyword: Chick, chicken.
