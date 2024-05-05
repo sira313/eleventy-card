@@ -45,7 +45,7 @@ layout: layout.html
                 <div class="masonry">
                     {% for photos in collections.photos reversed %}
                     <div class="brick">
-                        <a href="#{{ photos.data.id }}" class="modal-trigger">
+                        <a href="{{ photos.url }}">
                             <!-- thumbnail -->
                             <figure class="image">
                                 <img src={{ photos.data.thumbnail}} alt="Thumbnail post">

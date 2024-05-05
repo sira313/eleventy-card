@@ -79,19 +79,5 @@
 			</div>
 			<button class="modal-close is-large" aria-label="close"></button>
 		</div>
-		<!-- modal post photos -->
-		{% for photos in collections.photos reversed %}
-		<div id="{{ photos.data.id }}" class="modal">
-			<div class="modal-background">
-			</div>
-			<div class="modal-image">
-				<div class="image">
-					<img src="{{ photos.data.cover }}" alt="{{ photos.data.title }}">
-					<a class="has-bg-transparent is-size-7 has-text-weight-semibold" href={{ photos.url }} style="position:absolute; bottom: 10px; left: 10px;">View post</a>
-				</div>
-			</div>
-			<button class="modal-close is-large" aria-label="close"></button>
-		</div>
-		{% endfor %}
 	</body>
 </html>
