@@ -1,6 +1,5 @@
 ---
 layout: post-photos.html
-id: toko
 title: Toko
 description: Vivamus quis ipsum at sapien vestibulum tincidunt. Maecenas quis libero et neque elementum scelerisque. Aenean dapibus dui ut fermentum rhoncus.
 keyword: Vivamus, Ipsum, Sapien
