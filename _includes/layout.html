@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="id">
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<meta name="description" content="{{ description }}">
@@ -16,6 +16,7 @@
 		{% endif %}
 		<link rel="stylesheet" href="/asset/css/style.css">
 		<link rel="stylesheet" href="/asset/css/bulma.css">
+		<link href="/_pagefind/pagefind-ui.css" rel="stylesheet">
 		<meta name="view-transition" content="same-origin">
 		<script src="/asset/js/lazysizes.min.js"></script>
 		<script>
@@ -59,29 +60,31 @@
 			  });
 		  
 			});
-		</script>					
+		</script>
+		<style>
+			@media (prefers-color-scheme: dark) {
+			  :root {
+				--pagefind-ui-primary: var(--bulma-text-strong);
+				--pagefind-ui-text: var(--bulma-text-strong);
+				--pagefind-ui-background: var(--bulma-background);
+				--pagefind-ui-border: var(--bulma-background);
+				--pagefind-ui-tag: var(--bulma-background);
+			  }
+			}
+		  </style>					
 	</head>
 	<body>
-		<main>
+		<main data-pagefind-body>
 			{{ content }}
 		</main>
 		<!-- modal search in photos -->
-		<div id="searchPhotos" class="modal">
+		<div id="searchAll" class="modal">
 			<div class="modal-background"></div>
 			<div class="modal-content">
-			  	<div class="box">
-					SEARCH FEATURE WIP
-			  	</div>
-			</div>
-			<button class="modal-close is-large" aria-label="close"></button>
-		</div>
-		<!-- modal search in blog -->
-		<div id="searchBlog" class="modal">
-			<div class="modal-background"></div>
-			<div class="modal-content">
-			  	<div class="box">
-					SEARCH FEATURE WIP
-			  	</div>
+				<div class="box">
+					<div id="search" class="search"></div>
+					<script src="/_pagefind/pagefind-ui.js" onload="new PagefindUI({ element: '#search', showImages: false });"></script>
+				</div>
 			</div>
 			<button class="modal-close is-large" aria-label="close"></button>
 		</div>
