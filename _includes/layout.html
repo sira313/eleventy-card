@@ -4,13 +4,16 @@
 		<meta charset="utf-8">
 		<meta name="description" content="{{ description }}">
 		<meta name="keyword" content="{{ keyword }}">
-		<meta name="google-site-verification" content="y5Sbw5uym2mSr3t1VKAYwZl24Nc5yTYUhefvBIkAkUk" />
 		<meta name="author" content="{{ author }}">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" type="image/x-icon" href="/asset/index/favicon.ico">
 		<title>{{ title }}</title>
 		<meta property="og:title" content="{{ title }}">
-		<meta property="og:image" content="{{ cover }}">
+		{% if cover %}
+		  <meta property="og:image" content="{{ cover }}">
+		{% else %}
+		  <meta property="og:image" content="/asset/index/cover.webp">
+		{% endif %}
 		<link rel="stylesheet" href="/asset/css/style.css">
 		<link rel="stylesheet" href="/asset/css/bulma.css">
 		<meta name="view-transition" content="same-origin">
@@ -18,40 +21,40 @@
 		<script>
 			document.addEventListener('DOMContentLoaded', function () {
 		  
-			  // Temukan semua tautan modal
+			  // Find all modal link
 			  var modalTriggerList = [].slice.call(document.querySelectorAll('.modal-trigger'));
 		  
-			  // Loop melalui setiap tautan modal
+			  // Loop from modal link
 			  modalTriggerList.forEach(function (modalTriggerEl) {
-				// Tambahkan event listener untuk setiap tautan modal
+				// Add event listener for every link modal
 				modalTriggerEl.addEventListener('click', function (event) {
-				  event.preventDefault(); // Mencegah perilaku default tautan
-				  var target = document.querySelector(modalTriggerEl.getAttribute('href')); // Dapatkan elemen modal yang sesuai dengan href
-				  target.classList.add('is-active'); // Tampilkan modal
+				  event.preventDefault(); // Prevent default link behavior
+				  var target = document.querySelector(modalTriggerEl.getAttribute('href')); // Get the relevant modal element with href
+				  target.classList.add('is-active'); // Show the modal
 				});
 			  });
 		  
-			  // Temukan semua tombol tutup modal
+			  // Find every close button modal
 			  var modalCloseButtons = document.querySelectorAll('.modal-close');
 		  
-			  // Loop melalui setiap tombol tutup modal
+			  // Loop from every close button modal
 			  modalCloseButtons.forEach(function (btn) {
-				// Tambahkan event listener untuk setiap tombol tutup modal
+				// Add listener event for every close button modal
 				btn.addEventListener('click', function () {
-				  var modal = btn.closest('.modal'); // Dapatkan elemen modal terdekat
-				  modal.classList.remove('is-active'); // Sembunyikan modal
+				  var modal = btn.closest('.modal'); // Get the closest modal element 
+				  modal.classList.remove('is-active'); // Hide modal
 				});
 			  });
 		  
-			  // Temukan semua latar belakang modal
+			  // Find all modal background
 			  var modalBackgrounds = document.querySelectorAll('.modal-background');
 		  
-			  // Loop melalui setiap latar belakang modal
+			  // Loop from every modal background
 			  modalBackgrounds.forEach(function (background) {
-				// Tambahkan event listener untuk setiap latar belakang modal
+				// Add listener event for modal background
 				background.addEventListener('click', function () {
-				  var modal = background.closest('.modal'); // Dapatkan elemen modal terdekat
-				  modal.classList.remove('is-active'); // Sembunyikan modal
+				  var modal = background.closest('.modal'); // Get the closest modal element
+				  modal.classList.remove('is-active'); // Hide modal
 				});
 			  });
 		  
@@ -67,7 +70,7 @@
 			<div class="modal-background"></div>
 			<div class="modal-content">
 			  	<div class="box">
-					Fitur search masih WIP
+					SEARCH FEATURE WIP
 			  	</div>
 			</div>
 			<button class="modal-close is-large" aria-label="close"></button>
@@ -77,7 +80,7 @@
 			<div class="modal-background"></div>
 			<div class="modal-content">
 			  	<div class="box">
-					Fitur search masih WIP
+					SEARCH FEATURE WIP
 			  	</div>
 			</div>
 			<button class="modal-close is-large" aria-label="close"></button>
