@@ -4,7 +4,8 @@
 	"description": "A starter project for photographer/artist showing their work and blog randomly",
 	"scripts": {
 		"start": "eleventy --serve",
-		"build": "eleventy"
+		"build": "eleventy",
+		"mkpost": "node scripts/mkpost.js"
 	},
 	"keywords": [
 		"eleventy",
