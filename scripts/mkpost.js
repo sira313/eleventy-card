@@ -52,7 +52,7 @@ title: ${title.toLowerCase().replace(/(?:^|\s)\w/g, (m) => m.toUpperCase())}
 keyword: TODO
 cover: /asset/photos/
 thumbnail: /asset/photos/thumbnail/
-date: ${new Date().toLocaleDateString()}
+date: ${new Date().toISOString().split('T')[0]}
 tags: TODO
 ---
 
