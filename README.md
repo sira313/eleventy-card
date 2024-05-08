@@ -44,11 +44,11 @@ There are 3 indexs in this project
 - [/photos/index.html](/photos/index.html) is the index of all your photos.
 - [/blog/index.html](/blog/index.html) is the index of your blog.
 #### Post
-Use strip instead of space for post name file. Exc: `your-title-post.md`
-##### Photos
-Post a work using markdown in [/photos](/photos/) directory.
-##### Blog
-Write your blog using markdown in [/blog](/blog) directory.
+```
+$> pnpm mkpost -b Some post Title that maybe Long and using inconsistent Cases
+#               ⮤ post type: -b for blog and -p for photo
+#                                                               ⭶  post title
+```
 #### Asset
 All assets are in [/asset](/asset/) directory and called in the frontmatter.
 #### Tips
