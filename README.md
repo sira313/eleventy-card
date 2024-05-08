@@ -51,6 +51,7 @@ To create a post in `/blog` you need to
 pnpm mkpost -b Your post title
 ```
 It will create a markdown file in `/blog`.
+
 And if you wanted to create a post in `/photos` you just need to
 ```
 pnpm mkpost -p Your post title
