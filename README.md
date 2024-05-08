@@ -44,10 +44,14 @@ There are 3 indexs in this project
 - [/photos/index.html](/photos/index.html) is the index of all your photos.
 - [/blog/index.html](/blog/index.html) is the index of your blog.
 #### Post
+To create a post in `/blog` you need to
 ```
-$> pnpm mkpost -b Some post Title that maybe Long and using inconsistent Cases
-#               ⮤ post type: -b for blog and -p for photo
-#                                                               ⭶  post title
+pnpm mkpost -b Your post title
+```
+It will create a markdown file in `/blog`.
+And if you wanted to create a post in `/photos` you just need to
+```
+pnpm mkpost -p Your post title
 ```
 #### Asset
 All assets are in [/asset](/asset/) directory and called in the frontmatter.
