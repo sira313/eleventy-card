@@ -45,6 +45,7 @@ There are 3 indexs in this project
 - [/blog/index.html](/blog/index.html) is the index of your blog.
 #### Post
 We created a js script to make a post automatically, so you don't need to do that manual. [Thanks to my friend](https://github.com/mustofa-id).
+
 To create a post in `/blog` you need to
 ```
 pnpm mkpost -b Your post title
