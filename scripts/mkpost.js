@@ -4,7 +4,7 @@
  * @typedef { '-b' | '-p' } Post_Type
  */
 
-const { writeFileSync } = require("fs");
+const { existsSync, writeFileSync } = require("fs");
 const { resolve } = require("path");
 
 // get 3rd cli args as post type
@@ -45,6 +45,14 @@ const slug = title.toLocaleLowerCase().split(/\s+/g).slice(0, 5).join("-");
 // resolve post file that make use of slug
 const post_file = resolve(post_dirs[type], slug + ".md");
 
+// check if post file already exists
+if (existsSync(post_file)) {
+	console.error(
+		`⚠ post with slug "${slug}" already exists in "${post_dirs[type]}".\n`
+	);
+	process.exit(1);
+}
+
 // format frontmatter
 const frontmatter = `---
 layout: ${post_layouts[type]}
@@ -52,7 +60,7 @@ title: ${title.toLowerCase().replace(/(?:^|\s)\w/g, (m) => m.toUpperCase())}
 keyword: TODO
 cover: /asset/photos/
 thumbnail: /asset/photos/thumbnail/
-date: ${new Date().toISOString().split('T')[0]}
+date: ${new Date().toISOString().split("T")[0]}
 tags: TODO
 ---
 
