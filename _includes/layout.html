@@ -26,13 +26,17 @@
 				var modalTriggerList = [].slice.call(document.querySelectorAll('.modal-trigger'));
 
 				if (navigator.share) {
-					navigator.share({
-						title: document.title,
-						url: location.href
-					}).catch(console.error)
-					return
+					modalTriggerList.forEach(function (el) {
+						el.addEventListener('click', function (event) {
+							navigator.share({
+								title: document.title,
+								url: location.href
+							}).catch(console.error);
+						});
+					});
+					return;
 				}
-				
+
 				// Loop from modal link
 				modalTriggerList.forEach(function (modalTriggerEl) {
 					// Add event listener for every link modal
