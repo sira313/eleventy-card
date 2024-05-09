@@ -6,13 +6,13 @@
 		<meta name="keyword" content="{{ keyword }}">
 		<meta name="author" content="{{ author }}">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="icon" type="image/x-icon" href="/asset/index/favicon.ico">
+		<link rel="icon" type="image/x-icon" href="{{ rootURL }}/asset/index/favicon.ico">
 		<title>{{ title }}</title>
 		<meta property="og:title" content="{{ title }}">
 		{% if cover %}
-		  <meta property="og:image" content="{{ cover }}">
+		  <meta property="og:image" content="{{ rootURL }}{{ cover }}">
 		{% else %}
-		  <meta property="og:image" content="/asset/index/cover.webp">
+		  <meta property="og:image" content="{{ rootURL }}/asset/index/cover.webp">
 		{% endif %}
 		<link rel="stylesheet" href="/asset/css/style.css">
 		<link rel="stylesheet" href="/asset/css/bulma.css">
@@ -21,43 +21,60 @@
 		<script src="/asset/js/lazysizes.min.js"></script>
 		<script>
 			document.addEventListener('DOMContentLoaded', function () {
+				// copy to clipboard
+				var copyButton = document.querySelector('.button.is-link');
+        		var inputField = document.getElementById('textInput');
+
+        		copyButton.addEventListener('click', function () {
+        		    // Select text in the input field
+        		    inputField.select();
+        		    inputField.setSelectionRange(0, 99999); // For mobile
+
+        		    // Copy selected text
+        		    document.execCommand('copy');
+
+        		    // Give feedback to user
+        		    copyButton.textContent = 'Copied!';
+        		    setTimeout(function () {
+        		        copyButton.textContent = 'Copy';
+        		    }, 2000); // Back to the default text after 2 seconds
+        		});
+			  	// Find all modal link
+			  	var modalTriggerList = [].slice.call(document.querySelectorAll('.modal-trigger'));
 		  
-			  // Find all modal link
-			  var modalTriggerList = [].slice.call(document.querySelectorAll('.modal-trigger'));
-		  
-			  // Loop from modal link
-			  modalTriggerList.forEach(function (modalTriggerEl) {
+			  	// Loop from modal link
+			  	modalTriggerList.forEach(function (modalTriggerEl) {
 				// Add event listener for every link modal
 				modalTriggerEl.addEventListener('click', function (event) {
-				  event.preventDefault(); // Prevent default link behavior
-				  var target = document.querySelector(modalTriggerEl.getAttribute('href')); // Get the relevant modal element with href
-				  target.classList.add('is-active'); // Show the modal
+				  	event.preventDefault(); // Prevent default link behavior
+				  	var target = document.querySelector(modalTriggerEl.getAttribute('href')); // Get the relevant modal element with href
+				  	target.classList.add('is-active'); // Show the modal
+					});
 				});
-			  });
 		  
-			  // Find every close button modal
-			  var modalCloseButtons = document.querySelectorAll('.modal-close');
+			  	// Find every close button modal
+			  	var modalCloseButtons = document.querySelectorAll('.modal-close');
 		  
-			  // Loop from every close button modal
-			  modalCloseButtons.forEach(function (btn) {
+			  	// Loop from every close button modal
+			  	modalCloseButtons.forEach(function (btn) {
 				// Add listener event for every close button modal
 				btn.addEventListener('click', function () {
-				  var modal = btn.closest('.modal'); // Get the closest modal element 
-				  modal.classList.remove('is-active'); // Hide modal
+				  	var modal = btn.closest('.modal'); // Get the closest modal element 
+				  	modal.classList.remove('is-active'); // Hide modal
+					});
 				});
-			  });
 		  
-			  // Find all modal background
-			  var modalBackgrounds = document.querySelectorAll('.modal-background');
+			  	// Find all modal background
+			  	var modalBackgrounds = document.querySelectorAll('.modal-background');
 		  
-			  // Loop from every modal background
-			  modalBackgrounds.forEach(function (background) {
+			  	// Loop from every modal background
+			  	modalBackgrounds.forEach(function (background) {
 				// Add listener event for modal background
 				background.addEventListener('click', function () {
-				  var modal = background.closest('.modal'); // Get the closest modal element
-				  modal.classList.remove('is-active'); // Hide modal
-				});
-			  });
+				  	var modal = background.closest('.modal'); // Get the closest modal element
+				  	modal.classList.remove('is-active'); // Hide modal
+					});
+			  	});
 		  
 			});
 		</script>
@@ -84,6 +101,24 @@
 				<div class="box">
 					<div id="search" class="search"></div>
 					<script src="/_pagefind/pagefind-ui.js" onload="new PagefindUI({ element: '#search', showImages: false });"></script>
+				</div>
+			</div>
+			<button class="modal-close is-large" aria-label="close"></button>
+		</div>
+		<!-- modal share -->
+		<div id="share" class="modal">
+			<div class="modal-background"></div>
+			<div class="modal-content">
+				<div class="box">
+					<h2 class="title is-4">Bagikan Link</h2>
+            		<div class="field has-addons ">
+            		    <div class="control is-expanded">
+            		        <input id="textInput" class="input" type="text" value="{{ rootURL }}{{ page.url }}" readonly>
+            		    </div>
+            		    <div class="control">
+            		        <button class="button is-link">Copy</button>
+            		    </div>
+            		</div>
 				</div>
 			</div>
 			<button class="modal-close is-large" aria-label="close"></button>
