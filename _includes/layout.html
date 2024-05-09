@@ -21,6 +21,28 @@
 		<script src="/asset/js/lazysizes.min.js"></script>
 		<script>
 			document.addEventListener('DOMContentLoaded', function () {
+
+				// Find all modal link
+				var modalTriggerList = [].slice.call(document.querySelectorAll('.modal-trigger'));
+
+				if (navigator.share) {
+					navigator.share({
+						title: document.title,
+						url: location.href
+					}).catch(console.error)
+					return
+				}
+				
+				// Loop from modal link
+				modalTriggerList.forEach(function (modalTriggerEl) {
+					// Add event listener for every link modal
+					modalTriggerEl.addEventListener('click', function (event) {
+						event.preventDefault(); // Prevent default link behavior
+						var target = document.querySelector(modalTriggerEl.getAttribute('href')); // Get the relevant modal element with href
+						target.classList.add('is-active'); // Show the modal
+					});
+				});
+  
 				// copy to clipboard
 				var copyButton = document.querySelector('.button.is-link');
         		var inputField = document.getElementById('textInput');
@@ -39,19 +61,7 @@
         		        copyButton.textContent = 'Copy';
         		    }, 2000); // Back to the default text after 2 seconds
         		});
-			  	// Find all modal link
-			  	var modalTriggerList = [].slice.call(document.querySelectorAll('.modal-trigger'));
-		  
-			  	// Loop from modal link
-			  	modalTriggerList.forEach(function (modalTriggerEl) {
-				// Add event listener for every link modal
-				modalTriggerEl.addEventListener('click', function (event) {
-				  	event.preventDefault(); // Prevent default link behavior
-				  	var target = document.querySelector(modalTriggerEl.getAttribute('href')); // Get the relevant modal element with href
-				  	target.classList.add('is-active'); // Show the modal
-					});
-				});
-		  
+				
 			  	// Find every close button modal
 			  	var modalCloseButtons = document.querySelectorAll('.modal-close');
 		  
