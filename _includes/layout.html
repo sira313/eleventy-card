@@ -25,27 +25,24 @@
 				// Find all modal link
 				var modalTriggerList = [].slice.call(document.querySelectorAll('.modal-trigger'));
 
-				if (navigator.share) {
-					modalTriggerList.forEach(function (el) {
+				modalTriggerList.forEach(function (el) {
+					var href = el.getAttribute('href'); // Get the relevant modal element with href
+					if (navigator.share && href === '#share') {
 						el.addEventListener('click', function (event) {
 							navigator.share({
 								title: document.title,
 								url: location.href
 							}).catch(console.error);
 						});
-					});
-					return;
-				}
-
-				// Loop from modal link
-				modalTriggerList.forEach(function (modalTriggerEl) {
-					// Add event listener for every link modal
-					modalTriggerEl.addEventListener('click', function (event) {
-						event.preventDefault(); // Prevent default link behavior
-						var target = document.querySelector(modalTriggerEl.getAttribute('href')); // Get the relevant modal element with href
-						target.classList.add('is-active'); // Show the modal
-					});
-				});
+					} else {
+						// Add event listener for every link modal
+						el.addEventListener('click', function (event) {
+							event.preventDefault(); // Prevent default link behavior
+							var target = document.querySelector(href); // Get the relevant modal element with href
+							target.classList.add('is-active'); // Show the modal
+						});	
+					}
+				});				
   
 				// copy to clipboard
 				var copyButton = document.querySelector('.button.is-link');
