@@ -19,15 +19,15 @@ layout: layout.html
                 <!-- navbar -->
                 <div class="card-content has-no-padding-top-bottom" style="border-bottom: var(--bulma-card-footer-border-top);">
                     <div class="navbar-brand">
-                        <a class="navbar-item hoverable" href="/">{% feather "home" %}</a>
+                        <a aria-label="Home" class="navbar-item hoverable" href="/">{% feather "home" %}</a>
                         <div class="navbar-item has-text-weight-semibold">{{ title }}</div>
                         <div class="item-nav-end">
                             <!-- help me with this search -->
                             <!-- Search modal -->
-                            <a class="modal-trigger navbar-item hoverable" href="#searchAll">{% feather "search" %}</a>
+                            <a aria-label="Search" class="modal-trigger navbar-item hoverable" href="#searchAll">{% feather "search" %}</a>
                             <!-- tag filter -->
                             <div class="navbar-item hoverable dropdown is-right" onclick="javascript:document.querySelector('.dropdown').classList.toggle('is-active')" 
-                            onblur="javascript:document.querySelector('.dropdown').classList.toggle('is-active')" aria-haspopup="true" aria-controls="dropdown-menu">
+                            onblur="javascript:document.querySelector('.dropdown').classList.toggle('is-active')">
                             {% feather "menu" %}
                                 <div class="dropdown-menu" role="menu">
                                     <div class="dropdown-content">
