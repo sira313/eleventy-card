@@ -5,6 +5,11 @@ permalink: /asset/css/style.css
 
 /* custom style */
 
+.profile-pic {
+  border-radius: var(--bulma-card-radius);
+  border: 5px solid var(--bulma-scheme-main);
+}
+
 .bottom-left {
   position: absolute;
   bottom: -4.5rem;
@@ -14,7 +19,7 @@ permalink: /asset/css/style.css
 .profile-left {
   position: absolute;
   padding-top: 0.5rem;
-  left: 8.5rem;
+  left: 8.9rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -130,7 +135,7 @@ table {
     .profile-left {
       position: absolute;
       padding-top: 0.5rem;
-      left: 7.5rem;
+      left: 7rem;
     }
     
     .no-padding-mobile {
@@ -161,6 +166,11 @@ table {
       position: absolute;
       padding-top: 0.5rem;
       left: 1.5rem;
+    }
+
+    .profile-pic {
+      border: 0;
+      box-shadow: var(--bulma-shadow);
     }
   }
 
