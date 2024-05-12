@@ -57,6 +57,7 @@ if (existsSync(post_file)) {
 const frontmatter = `---
 layout: ${post_layouts[type]}
 title: ${title.toLowerCase().replace(/(?:^|\s)\w/g, (m) => m.toUpperCase())}
+description: TODO
 keyword: TODO
 cover: /asset/photos/
 thumbnail: /asset/photos/thumbnail/
