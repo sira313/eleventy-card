@@ -2,7 +2,30 @@
 eleventyExcludeFromCollections: true
 permalink: /asset/css/style.css
 ---
-/* custom */
+
+/* custom style */
+
+.bottom-left {
+  position: absolute;
+  bottom: -4.5rem;
+  left: 1.5rem;
+}
+
+.profile-left {
+  position: absolute;
+  padding-top: 0.5rem;
+  left: 8.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --pagefind-ui-primary: #eeeeee;
+    --pagefind-ui-text: #eeeeee;
+    --pagefind-ui-background: #152028;
+    --pagefind-ui-border: #152028;
+    --pagefind-ui-tag: #152028;
+  }
+}
 
 .modal-image img {
   max-width: 100%;
@@ -93,6 +116,23 @@ table {
   }
   
   @media (max-width: 500px) {
+    .has-size-mobile {
+      height: 80px !important;
+      width: 80px !important;
+    }
+    
+    .bottom-left {
+      position: absolute;
+      bottom: -4.5rem;
+      left: 1.5rem;
+    }
+    
+    .profile-left {
+      position: absolute;
+      padding-top: 0.5rem;
+      left: 7.5rem;
+    }
+    
     .no-padding-mobile {
         padding: 0 !important;
     }
@@ -104,6 +144,26 @@ table {
         border-start-end-radius: 0 !important;
     }
   }
+
+  @media (max-width: 400px) {
+    .has-size-mobile {
+      height: 50px !important;
+      width: 50px !important;
+    }
+    
+    .bottom-left {
+      position: absolute;
+      bottom: 0;
+      left: 1.5rem;
+    }
+    
+    .profile-left {
+      position: absolute;
+      padding-top: 0.5rem;
+      left: 1.5rem;
+    }
+  }
+
   .hoverable:hover {
     background-color: var(--bulma-background-hover);
   }
@@ -128,3 +188,14 @@ table {
   ::-webkit-scrollbar-thumb:hover {
     background: rgba(85, 85, 85, 0.40); 
   }
+
+/* for index */
+@media (min-width: 769px) {
+  .in-desktop {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+  .content-desktop {
+    overflow-y: auto;
+  }
+}
