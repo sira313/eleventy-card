@@ -11,29 +11,45 @@ layout: layout.html
                     <figure class="image">
                         <img class="card-no-border-radius-mobile" src={{ cover }} alt="cover">
                     </figure>
-                </div>
-                <div class="card-content">
-                    <div class="media">
+                    <!-- profile -->
+                    <div class="media bottom-left">
                         <div class="media-left">
-                            <figure class="image is-48x48">
-                                <img class="has-radius-normal" src={{ profile }} alt="profile pic">
+                            <figure class="image has-size-mobile">
+                                <img style="border-radius: var(--bulma-card-radius);" src={{ profile }} alt="profile pic">
                             </figure>
                         </div>
-                        <div class="media-content">
-                            <p class="title is-4">{{ author }}</p>
-                            <p class="subtitle is-6">@{{ title }}</p>
+                    </div>
+                    <div class="media-content profile-left">
+                        <p class="title is-4">{{ author }}</p>
+                        <p class="subtitle is-7">@{{ title }}</p>
+                    </div>
+                </div>
+                <!-- navbar -->
+                <div class="card-content has-no-padding-top-bottom">
+                    <div class="navbar-brand">
+                        <div class="item-nav-end">
+                            <!-- help me with this search -->
+                            <!-- Search modal -->
+                            <a aria-label="Search" class="modal-trigger navbar-item hoverable" href="#searchAll">{% feather "search" %}</a>
+                            <!-- tag filter -->
+                            <div class="navbar-item hoverable dropdown is-right" onclick="javascript:document.querySelector('.dropdown').classList.toggle('is-active')" 
+                            onblur="javascript:document.querySelector('.dropdown').classList.toggle('is-active')">
+                            {% feather "menu" %}
+                                <div class="dropdown-menu" role="menu">
+                                    <div class="dropdown-content">
+                                        <!-- menu here -->
+                                        <a class="dropdown-item" href="/photos">Photos</a>
+                                        <a class="dropdown-item" href="/blog">Blog</a>
+                                    </div> 
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <!-- here's nav bar -->
+                </div>
+                <div class="card-content">
+                    <!-- describe yourself in index.md -->
                     <div class="content">
-                        <a class="has-bg-transparent is-size-6 has-text-weight-semibold" href="/photos">Photos</a>
-                        <a class="has-bg-transparent is-size-6 has-text-weight-semibold" href="/blog">Random Blog</a>
-                    </div>
-                    <div class="content">
-                        <!-- describe yourself here -->
-                        <div class="content">
-                            {{ content }}
-                        </div>
+                        {{ content }}
                     </div>
                 </div>
                 <!-- here is footer -->
