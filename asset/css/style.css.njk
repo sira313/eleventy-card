@@ -5,6 +5,14 @@ permalink: /asset/css/style.css
 
 /* custom style */
 
+/* sticky navbar */
+.card-content.has-no-padding-top-bottom.nav-fix {
+  position: sticky;
+  top: 0;
+  z-index: 39; /* untuk memastikan elemen tetap di atas elemen lain */
+  background-color: var(--bulma-scheme-main);
+}
+
 .profile-pic {
   border-radius: var(--bulma-card-radius);
   border: 5px solid var(--bulma-scheme-main);
@@ -121,7 +129,8 @@ table {
   }
   
   @media (max-width: 500px) {
-    .has-size-mobile {
+    .has-size-mobile,
+    .profile-pic.ls-is-cached.lazyloaded {
       height: 80px !important;
       width: 80px !important;
     }
@@ -151,7 +160,8 @@ table {
   }
 
   @media (max-width: 400px) {
-    .has-size-mobile {
+    .has-size-mobile,
+    .profile-pic.ls-is-cached.lazyloaded {
       height: 50px !important;
       width: 50px !important;
     }
@@ -199,13 +209,10 @@ table {
     background: rgba(85, 85, 85, 0.40); 
   }
 
-/* for index */
-@media (min-width: 769px) {
-  .in-desktop {
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-  }
-  .content-desktop {
-    overflow-y: auto;
+@media (min-width: 501px) {
+  .has-size-mobile,
+  .profile-pic.ls-is-cached.lazyloaded {
+    height: 100px !important;
+    width: 100px !important;
   }
 }
