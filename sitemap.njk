@@ -4,10 +4,38 @@ eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    {% for page in collections.all %}
+    <url>
+        <loc>{{ rootURL }}/</loc>
+        <lastmod>{{ page.date.toISOString() }}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>{{ rootURL }}/photos/</loc>
+        <lastmod>{{ page.date.toISOString() }}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>{{ rootURL }}/blog/</loc>
+        <lastmod>{{ page.date.toISOString() }}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    {% for post in collections.posts | reverse %}
         <url>
-            <loc>{{ rootURL }}{{ page.url | url }}</loc>
-            <lastmod>{{ page.date.toISOString() }}</lastmod>
+            <loc>{{ rootURL }}{{ post.url }}</loc>
+            <lastmod>{{ post.data.date.toISOString() }}</lastmod>
+            <changefreq>weekly</changefreq>
+            <priority>0.5</priority>
+        </url>
+    {% endfor %}
+    {% for photos in collections.photos | reverse %}
+        <url>
+            <loc>{{ rootURL }}{{ photos.url }}</loc>
+            <lastmod>{{ photos.data.date.toISOString() }}</lastmod>
+            <changefreq>weekly</changefreq>
+            <priority>0.5</priority>
         </url>
     {% endfor %}
 </urlset>
