@@ -7,7 +7,7 @@ module.exports = function (eleventyConfig) {
 	// change this rootURL with your domain (without / at the end, see my example) !important
 	eleventyConfig.addGlobalData("rootURL", "https://eleventy-card.netlify.app");
 	eleventyConfig.on('eleventy.after', () => {
-		execSync(`npx pagefind --source _site --glob \"**/*.html\"`, { encoding: 'utf-8' })
+		execSync(`npx -y pagefind --site _site --output-subdir _pagefind`, { encoding: 'utf-8' })
 	  })
 	eleventyConfig.addPlugin(lazyImagesPlugin);
 	eleventyConfig.addPlugin(eleventyPluginFilesMinifier);
