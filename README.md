@@ -1,4 +1,5 @@
 ## Eleventy Card
+### [MIGRATE TO DAISY UI](https://github.com/sira313/twcarty)
 #### A starter project for photographer/artist showing their work and blog randomly
 #### [eleventy-card.netlify.app](https://eleventy-card.netlify.app/) 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/d32e682c-0084-4b0e-96e3-286b816a5033/deploy-status)](https://app.netlify.com/sites/eleventy-card/deploys)
